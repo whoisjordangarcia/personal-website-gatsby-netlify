@@ -1,0 +1,36 @@
+.App {
+}
+
+.personal-profile {
+  padding: 70px 50px;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.profile-info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 650px;
+  line-height: 40px;
+}
+
+.full-name {
+  font-weight: 600;
+}
+
+.social-container {
+}
+.social-icon {
+  margin: 5px;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.social-icon:first-child {
+  margin-left: 0;
+}

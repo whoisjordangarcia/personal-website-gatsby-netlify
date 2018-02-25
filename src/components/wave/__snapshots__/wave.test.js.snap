@@ -2,8 +2,6 @@
 
 exports[`renders correctly 1`] = `
 <span
-  className="wave animated"
->
-   
-</span>
+  className="sc-bdVaJa itFDaL"
+/>
 `;

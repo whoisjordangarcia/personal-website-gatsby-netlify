@@ -5,3 +5,7 @@
 .*/gulpfile.js
 
 [include]
+<PROJECT_ROOT>/src/
+
+[libs]
+flow/

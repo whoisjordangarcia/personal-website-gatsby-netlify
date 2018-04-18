@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import waveImage from './wave.png';
+import waveImage from './Wave.png';
 
 const waveAnimation = keyframes`
   from {

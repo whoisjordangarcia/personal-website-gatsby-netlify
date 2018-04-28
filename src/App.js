@@ -1,68 +1,279 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
-import { Wave, SocialIcon, Heading, Link } from './components';
-
+import { Paragraph, Heading, Link } from './components';
+import Intro from './sections/Intro';
+import Information from './sections/Information';
 import media from './styles/media';
 
-import profilePhoto from './profile_photo.jpg';
-
-const socialIcons = [
-  { network: 'github', url: 'https://github.com/arickho' },
-  { network: 'email', url: 'mailto:arickho@gmail.com' },
-  { network: 'linkedin', url: 'https://linkedin.com/in/arickhogarcia' },
-  { network: 'instagram', url: 'https://www.instagram.com/whoisjordangarcia/' },
-];
-
 const App = () => (
-  <Wrapper>
-    <ProfilePhoto alt="Profile" src={profilePhoto} />
-    <Info>
-      <Heading.h1>
-        Hello! <Wave />
-      </Heading.h1>
-
-      <Heading.h2>
-        {"I'm"} <span className="full-name">Jordan Garcia</span>, a Senior Software Engineer at{' '}
-        <Link bold href="https://todaytix.com/" target="_blank" rel="noopener noreferrer">
-          @todaytix
-        </Link>. Currently residing in New York, New York
-      </Heading.h2>
-      <div>
-        {socialIcons.map(socialIcon => <SocialIcon key={socialIcon.network} {...socialIcon} />)}
-      </div>
-    </Info>
-  </Wrapper>
+  <React.Fragment>
+    <Intro />
+    <Fade bottom>
+      <Information heading="BACKGROUND">
+        <Paragraph>
+          Software engineer on an assortment of technical projects, consistently recognised for
+          achievements through my education and into my professional career. I enjoy discovering
+          clever solutions to complex problems in all aspects of my field.
+        </Paragraph>
+        <Paragraph>
+          <strong>When I’m not in front of the computer screen coding,</strong> I’m probably finding
+          the next place to eat on ‘The Infatuation’, exploring the five boroughs of new york, or
+          crossing off another item on my bucket list.
+        </Paragraph>
+      </Information>
+      <Information heading="SKILLS">
+        <Lists>
+          <ul>
+            <li>
+              <ListHeading fontSize="18px">FRONTEND</ListHeading>
+            </li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Graphql</li>
+            <li>Webpack</li>
+            <li>Jest</li>
+            <li>Angular</li>
+          </ul>
+          <ul>
+            <li>
+              <ListHeading fontSize="18px">BACKEND</ListHeading>
+            </li>
+            <li>Node</li>
+            <li>Golang</li>
+            <li>Python</li>
+            <li>Redis</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+          <ul>
+            <li>
+              <ListHeading fontSize="18px">INFRA</ListHeading>
+            </li>
+            <li>Docker</li>
+            <li>Ansible</li>
+            <li>NGINX</li>
+          </ul>
+          <ul>
+            <li>
+              <ListHeading fontSize="18px">DESIGN</ListHeading>
+            </li>
+            <li>Sketch</li>
+            <li>InDesign</li>
+            <li>Photoshop</li>
+            <li>Prototyping</li>
+            <li>Wireframing</li>
+            <li>User Testing</li>
+          </ul>
+        </Lists>
+      </Information>
+      <Information>
+        <Link
+          bold
+          color="#ee5050"
+          fontSize="22px"
+          href="https://arickho.com/assets/JORDAN_GARCIA_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View my resume
+        </Link>
+      </Information>
+      <Information heading="CONTRIBUTION">
+        <GithubImage src="http://ghchart.rshah.org/EE5050/arickho" alt="arickho 's Github chart" />
+      </Information>
+      <Information heading="EXPERIENCE">
+        <CompanyWrapper>
+          <CompanyHeading fontSize="18px">TodayTix</CompanyHeading>
+          <CompanyContent>
+            Senior Software Engineer <CompanyDuration>Oct 17’ - Present</CompanyDuration>{' '}
+          </CompanyContent>
+        </CompanyWrapper>
+        <CompanyWrapper>
+          <CompanyHeading fontSize="18px">Tigerspike</CompanyHeading>
+          <CompanyContent>
+            Senior Software Engineer <CompanyDuration>Jul 16’ - Oct 17’</CompanyDuration>
+          </CompanyContent>
+          <CompanyContent>
+            Software Engineer <CompanyDuration>Sept 15’ - Jul 16’</CompanyDuration>
+          </CompanyContent>
+          <CompanyContent>
+            Software Engineer <CompanyDuration>Feb 14’ - Sep 15’</CompanyDuration>
+          </CompanyContent>
+        </CompanyWrapper>
+        <CompanyWrapper>
+          <CompanyHeading fontSize="18px">Simbiotic</CompanyHeading>
+          <CompanyContent>
+            Senior Developer <CompanyDuration>Jul 11’ - Jan 14’</CompanyDuration>
+          </CompanyContent>
+        </CompanyWrapper>
+        <CompanyWrapper>
+          <CompanyHeading fontSize="18px">Western Australia Police Airwing</CompanyHeading>
+          <CompanyContent>
+            Software Developer / Designer <CompanyDuration>Jul 11’ - Nov 11’</CompanyDuration>
+          </CompanyContent>
+        </CompanyWrapper>
+      </Information>
+      <FooterSection>
+        <ul>
+          <li>
+            <Link
+              bold
+              color="#ee5050"
+              fontSize="18px"
+              href="https://github.com/arickho"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GITHUB
+            </Link>
+          </li>
+          <li>
+            <Link
+              bold
+              color="#ee5050"
+              fontSize="18px"
+              href="https://www.linkedin.com/in/arickhogarcia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LINKEDIN
+            </Link>
+          </li>
+          <li>
+            <Link
+              bold
+              color="#ee5050"
+              fontSize="18px"
+              href="mailto:arickho@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              EMAIL
+            </Link>
+          </li>
+          <li>
+            <Link
+              bold
+              color="#ee5050"
+              fontSize="18px"
+              href="https://twitter.com/whoismrgarcia"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TWITTER
+            </Link>
+          </li>
+          <li>
+            <Link
+              bold
+              fontSize="18px"
+              color="#ee5050"
+              href="https://www.instagram.com/whoisjordangarcia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              INSTAGRAM
+            </Link>
+          </li>
+        </ul>
+      </FooterSection>
+    </Fade>
+  </React.Fragment>
 );
 
-const Wrapper = styled.header`
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  align-items: center;
-  background-color: #ee5050;
+const ListHeading = Heading.h3.extend`
+  font-weight: 500;
+  margin: 0 10px 0 0;
+  padding: 0;
+`;
+
+const Lists = styled.div`
   display: flex;
-  font-family: 'Source Sans Pro', sans-serif;
-  height: 100vh;
-  justify-content: center;
-  padding: 0 20px;
+  flex-direction: row;
+  ul {
+    list-style: none;
+    -webkit-padding-start: 0;
+    flex-grow: 1;
+
+    li {
+      font-size: 18px;
+      margin-bottom: 5px;
+      font-weight: 300;
+    }
+  }
+
   ${media.small`
-    flex-direction: column;
-    padding: 20px;
+    flex-wrap: wrap;
   `};
 `;
 
-const ProfilePhoto = styled.img`
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin-right: 25px;
+const GithubImage = styled.img`
+  margin-top: 25px;
+  width: 100%;
 `;
 
-const Info = styled.div`
-  display: inline-block;
-  vertical-align: top;
-  max-width: 650px;
-  line-height: 40px;
+const CompanyWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+`;
+
+const CompanyHeading = Heading.h3.extend`
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+`;
+
+const CompanyContent = Paragraph.extend`
+  margin: 0;
+  padding: 0;
+  width: 100%;
+`;
+
+const CompanyDuration = styled.span`
+  text-align: right;
+  float: right;
+  font-size: 16px;
+
+  ${media.small`
+    display: inline-block;
+    text-align: left;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  `};
+`;
+
+const FooterSection = styled.footer`
+  display: grid;
+  margin: 20px 100px;
+
+  ul {
+    list-style: none;
+    float: right;
+    -webkit-padding-start: 0;
+
+    li {
+      float: right;
+      text-align: right;
+      margin-left: 20px;
+      min-width: 100px;
+    }
+  }
+
+  ${media.small`
+    margin: 20px 40px;
+
+    ul li {
+      display: block;
+      float: left;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  `};
 `;
 
 export default App;

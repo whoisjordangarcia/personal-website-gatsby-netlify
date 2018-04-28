@@ -54,6 +54,7 @@ const StyledWave = styled.span`
   background-position: center;
   animation-name: ${waveAnimation};
   animation-fill-mode: both;
+  animation-delay: 1.5s;
   animation-duration: 3s;
 `;
 

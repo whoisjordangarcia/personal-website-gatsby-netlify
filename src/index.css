@@ -1,0 +1,9 @@
+html,
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fcfeff;
+  font-family: 'Apercu', 'Source Sans Pro', system, system-ui, -apple-system,
+    Roboto, Helvectica, Arial, sans-serif;
+  color: #4c4c4c;
+}

@@ -50,6 +50,6 @@ const Content = styled.div`
   padding-left: 100px;
 
   ${media.small`
-    padding-left: 10px;
+    padding-left: 0px;
   `};
 `;

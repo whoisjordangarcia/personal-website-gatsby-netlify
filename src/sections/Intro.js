@@ -44,9 +44,10 @@ const Wrapper = styled.header`
   height: 100vh;
   justify-content: center;
   padding: 0 20px;
+
   ${media.small`
     flex-direction: column;
-    padding: 40px;
+    padding: 20px 40px;
   `};
 `;
 
@@ -56,6 +57,10 @@ const ProfilePhoto = styled.img`
   border-radius: 50%;
   margin-right: 80px;
   z-index: 1;
+
+  ${media.small`
+    margin-right: 0;
+  `};
 `;
 
 const Info = styled.div`
@@ -77,6 +82,7 @@ const BlobWrapper = styled.div`
   position: absolute;
   transform: translateX(-30%);
   ${media.small`
-    transform: translateX(-10%) translateY(-20%);
+    transform: translateX(0%) translateY(-20%);
+    overflow: hidden;
   `};
 `;

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { TimelineMax, Power0 } from 'gsap';
+
+import media from '../../styles/media';
 
 const BLOB_ELEMENT = 'blob-path';
 
@@ -66,4 +67,8 @@ const SvgCanvas = styled.svg.attrs({
   xmlns: 'http://www.w3.org/2000/svg',
 })`
   fill: rgb(238, 80, 80);
+
+  ${media.small`
+    width: 100%;
+  `};
 `;

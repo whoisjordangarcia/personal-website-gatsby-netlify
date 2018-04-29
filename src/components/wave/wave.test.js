@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Wave from './Wave';
+import { Wave } from '../../components';
 
 it('renders correctly', () => {
   const tree = renderer.create(<Wave />).toJSON();

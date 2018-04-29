@@ -69,6 +69,6 @@ const SvgCanvas = styled.svg.attrs({
   fill: rgb(238, 80, 80);
 
   ${media.small`
-    width: 100%;
+    width: 100vw;
   `};
 `;

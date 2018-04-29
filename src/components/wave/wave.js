@@ -60,4 +60,4 @@ const StyledWave = styled.span`
 
 const Wave = () => <StyledWave />;
 
-export default Wave;
+export { Wave as default };

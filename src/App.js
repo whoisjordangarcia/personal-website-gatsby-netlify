@@ -96,7 +96,7 @@ const App = () => {
         <div>
           <Information heading="CONTRIBUTION">
             <GithubImage
-              src="http://ghchart.rshah.org/EE5050/arickho"
+              src="https://ghchart.rshah.org/EE5050/arickho"
               alt="arickho 's Github chart"
             />
           </Information>

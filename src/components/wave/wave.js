@@ -3,6 +3,10 @@ import styled, { keyframes } from 'styled-components';
 
 import waveImage from './Wave.png';
 
+export default function Wave() {
+  return <StyledWave />;
+}
+
 const waveAnimation = keyframes`
   from {
     -webkit-transform: none;
@@ -57,7 +61,3 @@ const StyledWave = styled.span`
   animation-delay: 1.5s;
   animation-duration: 3s;
 `;
-
-const Wave = () => <StyledWave />;
-
-export { Wave as default };

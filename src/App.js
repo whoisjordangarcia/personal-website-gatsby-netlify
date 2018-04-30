@@ -102,31 +102,34 @@ const App = () => {
           </Information>
           <Information heading="EXPERIENCE">
             <CompanyWrapper>
-              <CompanyHeading fontSize="18px">TodayTix</CompanyHeading>
+              <CompanyHeading fontSize="18px">TodayTix, NYC</CompanyHeading>
               <CompanyContent>
                 Senior Software Engineer <CompanyDuration>Oct 17’ - Present</CompanyDuration>{' '}
               </CompanyContent>
             </CompanyWrapper>
             <CompanyWrapper>
-              <CompanyHeading fontSize="18px">Tigerspike</CompanyHeading>
+              <CompanyHeading fontSize="18px">Tigerspike, NYC</CompanyHeading>
               <CompanyContent>
                 Senior Software Engineer <CompanyDuration>Jul 16’ - Oct 17’</CompanyDuration>
               </CompanyContent>
               <CompanyContent>
                 Software Engineer <CompanyDuration>Sept 15’ - Jul 16’</CompanyDuration>
               </CompanyContent>
+            </CompanyWrapper>
+            <CompanyWrapper>
+              <CompanyHeading fontSize="18px">Tigerspike, SYD</CompanyHeading>
               <CompanyContent>
                 Software Engineer <CompanyDuration>Feb 14’ - Sep 15’</CompanyDuration>
               </CompanyContent>
             </CompanyWrapper>
             <CompanyWrapper>
-              <CompanyHeading fontSize="18px">Simbiotic</CompanyHeading>
+              <CompanyHeading fontSize="18px">Simbiotic, PER</CompanyHeading>
               <CompanyContent>
                 Senior Developer <CompanyDuration>Jul 11’ - Jan 14’</CompanyDuration>
               </CompanyContent>
             </CompanyWrapper>
             <CompanyWrapper>
-              <CompanyHeading fontSize="18px">Western Australia Police Airwing</CompanyHeading>
+              <CompanyHeading fontSize="18px">Western Australia Police Airwing, PER</CompanyHeading>
               <CompanyContent>
                 Software Developer / Designer <CompanyDuration>Jul 11’ - Nov 11’</CompanyDuration>
               </CompanyContent>

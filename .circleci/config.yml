@@ -15,8 +15,7 @@ jobs:
       paths:
         - node_modules
       key: v1-dependencies-{{ checksum "package.json" }}
-
-  build:
+  build_app:
       - checkout
       - restore_cache:
           keys:
@@ -48,7 +47,7 @@ workflows:
   build_web_workflow:
     jobs:
       - install_dependencies
-      - build:
+      - build_app:
           requires:
             - install_dependencies
           branches:

@@ -44,6 +44,7 @@ jobs:
       - run:
           name: Install aws eb cli
           command: sudo pip3 install awsebcli --upgrade --user
+      - run: export PATH=~/.local/bin:$PATH
       - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker

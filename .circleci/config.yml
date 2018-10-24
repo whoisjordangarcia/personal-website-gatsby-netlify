@@ -43,7 +43,7 @@ jobs:
           command: sudo apt-get install -y awscli awsebcli
       - run:
           name: Deploy to S3
-          command: aws s3 sync build/ s3://arickho.com
+          command: aws s3 sync build/ s3://arickho-dot-com-docker
       - run:
           name: Deploy to Elastic Beanstalk
           command: eb deploy production

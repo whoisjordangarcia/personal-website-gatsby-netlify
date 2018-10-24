@@ -40,10 +40,10 @@ jobs:
           command: sudo apt-get update -y
       - run:
           name: Install aws cli and python
-          command: sudo apt-get install -y awscli python-pip
+          command: sudo apt-get install -y awscli python3-pip
       - run:
           name: Install aws eb cli
-          command: sudo pip install awsebcli --upgrade --user
+          command: sudo pip3 install awsebcli --upgrade --user
       - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker

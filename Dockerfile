@@ -1,19 +1,14 @@
-# base image
-FROM node:8
+FROM mhart/alpine-node:10
 
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /usr/src
 
-# `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY package.json ./
 
-# install and cache app dependencies
-COPY package.json /usr/src/app/package.json
-COPY yarn.lock /usr/src/app/yarn.lock
-RUN yarn
+RUN npm install
 
-# start app
-CMD ["yarn", "start"]
+COPY . .
 
+RUN npm run build
 
+EXPOSE 3000
+CMD ["npm", "start"]

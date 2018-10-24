@@ -1,8 +1,6 @@
-Dockerfile
-.dockerignore
-.gitignore
-README.md
-
-node_modules
-npm-debug.log
-build
+*
+!pages
+!components
+!static
+!package.json
+!store

@@ -4,3 +4,7 @@
 !static
 !package.json
 !store
+!next.config.js
+!routes.js
+!server.js
+!lib

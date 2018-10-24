@@ -1,17 +1,10 @@
-version: '3.5'
+version: '2.1'
 
 services:
-  arickho-com:
-    container_name: arickho-com
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - '.:/usr/src/app'
-      - '/usr/src/app/node_modules'
-    ports:
-      - '3000:3000'
+  arickho.com:
+    image: arickho.com
+    build: .
     environment:
-      - NODE_ENV=development
-        
-        
+      NODE_ENV: production
+    ports:
+      - 3000:3000

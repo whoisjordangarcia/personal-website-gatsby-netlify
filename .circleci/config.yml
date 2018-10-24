@@ -39,11 +39,15 @@ jobs:
           name: Update apt-get
           command: sudo apt-get update -y
       - run:
-          name: Install aws cli
-          command: sudo apt-get install -y awscli
+          name: Install aws cli and elastic beanstalk cli
+          command: sudo apt-get install -y awscli awsebcli
       - run:
           name: Deploy to S3
-          command: aws s3 sync build/ s3://arickho.com
+          command: aws s3 sync build/ s3://arickho-dot-com-docker
+      - run:
+          name: Deploy to Elastic Beanstalk
+          command: eb deploy production
+
 workflows:
   version: 2
   build_web_workflow:

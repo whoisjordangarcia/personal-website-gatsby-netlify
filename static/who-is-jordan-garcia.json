@@ -1,0 +1,125 @@
+{
+  "background": [
+    "Software engineer on an assortment of technical projects, consistently recognised for achievements through my education and into my professional career. I enjoy discovering clever solutions to complex problems in all aspects of my field.",
+    "<strong>When I’m not in front of the computer screen coding</strong>, I’m probably finding the next place to eat on ‘The Infatuation’, exploring the five boroughs of new york, or crossing off another item on my bucket list."
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "list": ["React", "Redux", "Graphql", "Webpack", "Jest", "Angular"]
+    },
+
+    {
+      "name": "Backend",
+      "list": ["Node", "Golang", "Python", "Redix", "MySQL", "MongoDB"]
+    },
+
+    { "name": "Infra", "list": ["Docker", "Ansible", "NGINX"] },
+
+    {
+      "name": "Design",
+      "list": [
+        "Sketch",
+        "InDesign",
+        "Photoshop",
+        "Prototyping",
+        "Wireframing",
+        "User Testing"
+      ]
+    }
+  ],
+  "resume": "/static/jordan_garcia_oct_18_cv.pdf",
+  "contribution": {
+    "url": "https://ghchart.rshah.org/EE5050/arickho",
+    "alt": "arickho 's Github chart"
+  },
+  "experience": [
+    {
+      "title": "Invitae, NYC",
+      "positions": [
+        {
+          "role": "Senior Software Engineer",
+          "from": "Nov 18’",
+          "to": "Present"
+        }
+      ]
+    },
+    {
+      "title": "TodayTix, NYC",
+      "positions": [
+        {
+          "role": "Senior Software Engineer",
+          "from": "Oct 17’",
+          "to": "Oct 18’"
+        }
+      ]
+    },
+    {
+      "title": "Tigerspike, NYC",
+      "positions": [
+        {
+          "role": "Senior Software Engineer",
+          "from": "Jul 16’",
+          "to": "Oct 17’"
+        },
+        {
+          "role": "Software Engineer",
+          "from": "Sept 15’",
+          "to": "Jul 16’"
+        }
+      ]
+    },
+    {
+      "title": "Tigerspike, SYD",
+      "positions": [
+        {
+          "role": "Software Engineer",
+          "from": "Feb 14’",
+          "to": "Sept 15’"
+        }
+      ]
+    },
+    {
+      "title": "Simbiotic, PER",
+      "positions": [
+        {
+          "role": "Software Developer",
+          "from": "Jul 11’",
+          "to": "Jan 14’"
+        }
+      ]
+    },
+    {
+      "title": "Western Australia Police Airwing, PER",
+      "positions": [
+        {
+          "role": "Software Developer / Designer",
+          "from": "Jul 11’",
+          "to": "Nov 11’"
+        }
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/whoisjordangarcia/"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/whoismrgarcia"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:arickho@gmail.com"
+    },
+    {
+      "name": "Linkedin",
+      "url": "https://www.linkedin.com/in/arickhogarcia/"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/arickho"
+    }
+  ]
+}

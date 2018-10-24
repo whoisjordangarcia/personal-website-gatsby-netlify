@@ -4,7 +4,7 @@ import { Normalize } from 'styled-normalize';
 
 import { FontStyles } from 'templates';
 
-import { GA_TRACKING_ID } from '../constants';
+import { GA_TRACKING_ID } from 'store/constants';
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {

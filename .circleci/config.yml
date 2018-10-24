@@ -40,7 +40,7 @@ jobs:
           command: sudo apt-get update -y
       - run:
           name: Install aws cli and python
-          command: sudo apt-get install -y awscli python-dev
+          command: sudo apt-get install -y awscli python-pip
       - run:
           name: Install aws eb cli
           command: sudo pip install awsebcli --upgrade

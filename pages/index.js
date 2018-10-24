@@ -14,7 +14,7 @@ import {
   externalClicked as externalClickedActionCreator,
   fetchData,
   getData as getDataSelector
-} from '../store';
+} from 'store';
 
 const ResumeInformation = styled(Information)`
   margin: 10px 0;

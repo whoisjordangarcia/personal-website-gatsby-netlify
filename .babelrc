@@ -16,7 +16,9 @@
         "alias": {
           "components": "./components",
           "images": "./images",
+          "lib": "./lib",
           "sections": "./sections",
+          "static": "./static",
           "store": "./store",
           "styles": "./components/_styles",
           "templates": "./components/_templates"

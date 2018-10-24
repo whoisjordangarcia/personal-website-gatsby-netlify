@@ -8,3 +8,5 @@
 !routes.js
 !server.js
 !lib
+!.babelrc
+!.npmignore

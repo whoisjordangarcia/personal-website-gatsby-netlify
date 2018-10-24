@@ -1,4 +1,4 @@
-import jsonData from '../static/who-is-jordan-garcia.json';
+import jsonData from 'static/who-is-jordan-garcia.json';
 
 const initialState = {
   data: null

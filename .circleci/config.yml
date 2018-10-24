@@ -43,7 +43,7 @@ jobs:
           command: sudo apt-get install -y awscli python-pip
       - run:
           name: Install aws eb cli
-          command: sudo pip install awsebcli --upgrade
+          command: sudo pip install awsebcli --upgrade --user
       - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker

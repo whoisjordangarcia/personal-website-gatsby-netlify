@@ -59,12 +59,8 @@ jobs:
       - run:
           name: Deploy to EB if branch is Master
           command: |
-            eb use arickho-dot-com-dev --profile eb-cli
-            eb deploy -v --staged --profile eb-cli
-
-      - run:
-          name: Deploy to Elastic Beanstalk
-          command: eb deploy production
+            eb use arickho-dot-com-dev
+            eb deploy production
 
 workflows:
   version: 2

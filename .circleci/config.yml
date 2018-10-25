@@ -50,17 +50,14 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install awscli
+          name: Install awsebcli
           command: |
             sudo pip install awsebcli --upgrade
       - run:
-          name: Install aws cli
-          command: sudo apt-get install -y awscli
-      - run:
-          name: Deploy to EB if branch is Master
+          name: Deploy to EB
           command: |
             eb use arickho-dot-com-dev
-            eb deploy production
+            eb deploy production --region us-east-1
 
 workflows:
   version: 2

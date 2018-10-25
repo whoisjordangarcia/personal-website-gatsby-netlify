@@ -57,7 +57,7 @@ jobs:
           name: Deploy to EB
           command: |
             eb use arickho-dot-com-dev
-            eb deploy production --region us-east-1
+            eb deploy arickho-dot-com-prod --region us-east-1
 
 workflows:
   version: 2

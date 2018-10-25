@@ -54,10 +54,8 @@ jobs:
           command: |
             sudo pip install awsebcli --upgrade
       - run:
-          name: Deploy to EB
-          command: |
-            eb use arickho-dot-com-dev
-            eb deploy arickho-dot-com-dev --region us-east-1
+          name: Deploy to Dev EB
+          command: eb deploy arickho-dot-com-dev --region us-east-1
   build_and_deploy_to_prod_s3:
     docker:
       - image: 'circleci/node:8.12.0'
@@ -88,10 +86,8 @@ jobs:
           command: |
             sudo pip install awsebcli --upgrade
       - run:
-          name: Deploy to EB
-          command: |
-            eb use arickho-dot-com-prod
-            eb deploy arickho-dot-com-prod --region us-east-1
+          name: Deploy to Prod EB
+          command: eb deploy arickho-dot-com-prod --region us-east-1
 
 workflows:
   version: 2

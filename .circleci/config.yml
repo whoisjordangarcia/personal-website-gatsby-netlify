@@ -43,7 +43,7 @@ jobs:
           command: sudo apt-get install -y awscli
       - run:
           name: Deploy to S3
-          command: aws s3 sync out/ s3://arickho-dot-com-docker
+          command: aws s3 sync out/ s3://arickho-dot-com-docker --delete
   build_and_deploy_to_dev_eb:
     docker:
       - image: 'circleci/python:2.7'
@@ -75,7 +75,7 @@ jobs:
           command: sudo apt-get install -y awscli
       - run:
           name: Deploy to S3
-          command: aws s3 sync out/ s3://arickho-dot-com-docker-prod
+          command: aws s3 sync out/ s3://arickho-dot-com-docker-prod --delete
   build_and_deploy_to_prod_eb:
     docker:
       - image: 'circleci/python:2.7'

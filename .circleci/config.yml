@@ -24,7 +24,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
-  build_and_deploy_to_s3:
+  build_and_deploy_to_dev_s3:
     docker:
       - image: 'circleci/node:8.12.0'
     steps:
@@ -44,7 +44,41 @@ jobs:
       - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker
-  build_and_deploy_to_eb:
+  build_and_deploy_to_dev_eb:
+    docker:
+      - image: 'circleci/python:2.7'
+    steps:
+      - checkout
+      - run:
+          name: Install awsebcli
+          command: |
+            sudo pip install awsebcli --upgrade
+      - run:
+          name: Deploy to EB
+          command: |
+            eb use arickho-dot-com-dev
+            eb deploy arickho-dot-com-dev --region us-east-1
+  build_and_deploy_to_prod_s3:
+    docker:
+      - image: 'circleci/node:8.12.0'
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: Build application
+          command: npm run build
+      - run:
+          name: Update apt-get
+          command: sudo apt-get update -y
+      - run:
+          name: Install aws cli
+          command: sudo apt-get install -y awscli
+      - run:
+          name: Deploy to S3
+          command: aws s3 sync out/ s3://arickho-dot-com-docker-prod
+  build_and_deploy_to_prod_eb:
     docker:
       - image: 'circleci/python:2.7'
     steps:
@@ -71,13 +105,25 @@ workflows:
             branches:
               ignore:
                 - master
-      - build_and_deploy_to_s3:
+      - build_and_deploy_to_dev_s3:
+          requires:
+            - install_dependencies
+          filters:
+            branches:
+              only: develop
+      - build_and_deploy_to_dev_eb:
+          requires:
+            - install_dependencies
+          filters:
+            branches:
+              only: develop
+      - build_and_deploy_to_prod_s3:
           requires:
             - install_dependencies
           filters:
             branches:
               only: master
-      - build_and_deploy_to_eb:
+      - build_and_deploy_to_prod_eb:
           requires:
             - install_dependencies
           filters:

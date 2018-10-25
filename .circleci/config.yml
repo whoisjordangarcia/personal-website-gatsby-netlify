@@ -24,7 +24,7 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
       - run: npm run build
-  build_and_deploy:
+  build_and_deploy_to_s3:
     docker:
       - image: 'circleci/node:8.12.0'
     steps:
@@ -42,15 +42,26 @@ jobs:
           name: Install aws cli
           command: sudo apt-get install -y awscli
       - run:
-          name: Install pip and tools
-          command: |
-            curl -O https://bootstrap.pypa.io/get-pip.py
-            python get-pip.py --user
-            python -m pip install awsebcli --upgrade --user
-            echo 'export PATH=~/.local/bin/:$PATH' >> $BASH_ENV
-      - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker
+  build_and_deploy_to_eb:
+    docker:
+      - image: 'circleci/python:2.7'
+    steps:
+      - checkout
+      - run:
+          name: Install awscli
+          command: |
+            sudo pip install awsebcli --upgrade
+      - run:
+          name: Install aws cli
+          command: sudo apt-get install -y awscli
+      - run:
+          name: Deploy to EB if branch is Master
+          command: |
+            eb use arickho-dot-com-dev --profile eb-cli
+            eb deploy -v --staged --profile eb-cli
+
       - run:
           name: Deploy to Elastic Beanstalk
           command: eb deploy production
@@ -67,7 +78,13 @@ workflows:
             branches:
               ignore:
                 - master
-      - build_and_deploy:
+      - build_and_deploy_to_s3:
+          requires:
+            - install_dependencies
+          filters:
+            branches:
+              only: master
+      - build_and_deploy_to_eb:
           requires:
             - install_dependencies
           filters:

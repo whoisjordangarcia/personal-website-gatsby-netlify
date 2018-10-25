@@ -56,7 +56,7 @@ jobs:
       - run:
           name: Deploy to EB
           command: |
-            eb use arickho-dot-com-dev
+            eb use arickho-dot-com-prod
             eb deploy arickho-dot-com-prod --region us-east-1
 
 workflows:

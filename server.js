@@ -2,7 +2,8 @@ const express = require('express');
 const next = require('next');
 const { parse } = require('url');
 
-const dev = process.env.NODE_ENV !== 'production';
+const dev =
+  process.env.NODE_ENV !== 'production' || process.env.NODE_ENV !== 'staging';
 const PORT = process.env.PORT || 3000;
 
 const app = next({ dir: '.', dev });

@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
-    "build": "NODE_ENV=production next build",
+    "start": "node server.js",
+    "build": "next build",
     "flow": "flow",
     "interactive-upgrade": "npm-upgrade",
     "lint:css": "stylelint './**/*.js'",

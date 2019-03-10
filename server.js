@@ -2,8 +2,11 @@ const express = require('express');
 const next = require('next');
 const { parse } = require('url');
 
-const dev =
-  process.env.NODE_ENV !== 'production' || process.env.NODE_ENV !== 'staging';
+const isProd = process.env.NODE_ENV === 'production';
+const isStaging = process.env.NODE_ENV === 'staging';
+
+const dev = !isProd || !isStaging;
+
 const PORT = process.env.PORT || 3000;
 
 const app = next({ dir: '.', dev });
@@ -12,6 +15,7 @@ const handle = app.getRequestHandler();
 const getRoutes = require('./routes');
 
 const routes = getRoutes();
+
 app.prepare().then(() => {
   const server = express();
 
@@ -37,6 +41,16 @@ app.prepare().then(() => {
     const parsedUrl = parse(req.url, true);
     const { pathname, query = {} } = parsedUrl;
     const route = routes[pathname];
+
+    let assetPrefix = '';
+    if (isProd) {
+      assetPrefix = 'https://d2sme3l3qt7hwa.cloudfront.net';
+    } else if (isStaging) {
+      assetPrefix = 'https://d3m2aicst54pyg.cloudfront.net';
+    }
+
+    app.setAssetPrefix(assetPrefix);
+
     if (route) {
       return app.render(req, res, route.page, query);
     }

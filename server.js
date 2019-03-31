@@ -44,7 +44,7 @@ app.prepare().then(() => {
 
     let assetPrefix = '';
     if (isProd) {
-      assetPrefix = 'https://d2sme3l3qt7hwa.cloudfront.net';
+      assetPrefix = 'https://static.arickho.com';
     } else if (isStaging) {
       assetPrefix = 'https://d3m2aicst54pyg.cloudfront.net';
     }

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Fade from 'react-reveal/Fade';
 import Head from 'next/head';
 
-import { Paragraph, Heading, Link } from 'components';
+import { Paragraph, Heading, Link, HeaderTags } from 'components';
 import { Intro, Information } from 'templates';
 import { media } from 'styles';
 
@@ -137,6 +137,7 @@ class Index extends Component {
   }
 
   static propTypes = {
+    data: PropTypes.shape(),
     downloadClicked: PropTypes.func.isRequired
   };
 
@@ -163,6 +164,7 @@ class Index extends Component {
       <React.Fragment>
         <Head>
           <title>Who is Jordan Garcia?</title>
+          <HeaderTags {...data.headers} />
         </Head>
         <Intro />
         <Fade bottom>
@@ -236,7 +238,7 @@ class Index extends Component {
             <FooterSection>
               <ul>
                 {contacts.map(contact => (
-                  <li key={contact}>
+                  <li key={contact.name}>
                     <Link
                       bold
                       color="#ee5050"

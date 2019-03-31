@@ -1,4 +1,20 @@
 {
+  "headers": {
+    "description": "Senior Software Engineer at @invitae. Currently residing in New York, New York.",
+    "humansText": "/static/humans.txt",
+    "imageHeight": "1280",
+    "imageType": "image/png",
+    "imageUrl": "/static/og.png",
+    "imageWidth": "579",
+    "keywords": "development, web, arickho, jordan, garcia, javascript, react, front end,new york",
+    "locale": "en_US",
+    "shortIcon": "/static/man-technologist.png",
+    "siteName": "",
+    "title": "Who is Jordan Garcia?",
+    "url": "https://arickho.com/",
+    "jobTitle": "Senior Software Engineer",
+    "twitterHandle": "@whoismrgarcia"
+  },
   "background": [
     "Software engineer on an assortment of technical projects, consistently recognised for achievements through my education and into my professional career. I enjoy discovering clever solutions to complex problems in all aspects of my field.",
     "<strong>When I’m not in front of the computer screen coding</strong>, I’m probably finding the next place to eat on ‘The Infatuation’, exploring the five boroughs of new york, or crossing off another item on my bucket list."

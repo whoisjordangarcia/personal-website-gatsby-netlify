@@ -27,7 +27,7 @@
 
     {
       "name": "Backend",
-      "list": ["Node", "Golang", "Python", "Redix", "MySQL", "MongoDB"]
+      "list": ["Node", "Golang", "Python", "Redis", "MySQL", "MongoDB"]
     },
 
     { "name": "Infra", "list": ["Docker", "Ansible", "NGINX"] },

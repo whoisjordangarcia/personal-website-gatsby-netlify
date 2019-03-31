@@ -36,11 +36,12 @@ jobs:
           name: Build application
           command: NODE_ENV=staging npm run build
       - run:
-          name: Update apt-get
-          command: sudo rm -rf /var/lib/apt/lists/* && sudo apt-get update -y
-      - run:
           name: Install aws cli
-          command: sudo apt-get install -y awscli
+          command: |
+            sudo apt-get install -y libpython-dev
+            curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+            unzip awscli-bundle.zip
+            ./awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker --delete
@@ -68,11 +69,12 @@ jobs:
           name: Build application
           command: NODE_ENV=production npm run build
       - run:
-          name: Update apt-get
-          command: sudo rm -rf /var/lib/apt/lists/* && sudo apt-get update -y
-      - run:
           name: Install aws cli
-          command: sudo apt-get install -y awscli
+          command: |
+            sudo apt-get install -y libpython-dev
+            curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+            unzip awscli-bundle.zip
+            ./awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
           command: aws s3 sync out/ s3://arickho-dot-com-docker-prod --delete

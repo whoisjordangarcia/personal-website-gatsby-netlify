@@ -209,9 +209,11 @@ class Index extends Component {
           </div>
 
           <div>
-            <Information heading="CONTRIBUTION">
-              <GithubImage src={contribution.url} alt={contribution.alt} />
-            </Information>
+            {!contribution.isHidden && (
+              <Information heading="CONTRIBUTION">
+                <GithubImage src={contribution.url} alt={contribution.alt} />
+              </Information>
+            )}
 
             <Information heading="EXPERIENCE">
               {experienceList.map(experience => (

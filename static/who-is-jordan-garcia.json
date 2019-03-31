@@ -30,8 +30,9 @@
   ],
   "resume": "/static/resume/jordan_garcia_oct_18_cv.pdf",
   "contribution": {
-    "url": "https://ghchart.rshah.org/EE5050/arickho",
-    "alt": "arickho 's Github chart"
+    "alt": "arickho 's Github chart",
+    "isHidden": true,
+    "url": "https://ghchart.rshah.org/EE5050/arickho"
   },
   "experience": [
     {

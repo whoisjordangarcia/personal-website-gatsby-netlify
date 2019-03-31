@@ -38,19 +38,19 @@ export default class MyDocument extends Document {
           <meta property="og:title" content="Who is Jordan Garcia?" />
           <meta
             property="og:description"
-            content="Senior Software Engineer at @todaytix. Currently residing in New York, New York."
+            content="Senior Software Engineer at @invitae. Currently residing in New York, New York."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://arickho.com/" />
           <meta property="og:site_name" content="Who is Jordan Garcia?" />
           <meta property="og:image" content="/static/og.png" />
           <meta property="og:image:width" content="1280" />
-          <meta property="og:image:height" content="800" />
+          <meta property="og:image:height" content="579" />
           <meta property="og:image:type" content="image/png" />
           <meta property="og:locale" content="en_US" />
           <meta
             name="description"
-            content="Senior Software Engineer at @todaytix. Currently residing in New York, New York."
+            content="Senior Software Engineer at @invitae. Currently residing in New York, New York."
           />
           <meta
             name="keywords"
@@ -59,7 +59,7 @@ export default class MyDocument extends Document {
           <meta itemProp="name" content="Who is Jordan Garcia?" />
           <meta
             itemProp="description"
-            content="Senior Software Engineer at @todaytix. Currently residing in New York, New York"
+            content="Senior Software Engineer at @invitae. Currently residing in New York, New York"
           />
           <meta itemProp="image" content="/static/og.png" />
           <meta itemProp="jobTitle" content="Senior Software Engineer" />
@@ -70,7 +70,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:title" content="Who is Jordan Garcia?" />
           <meta
             name="twitter:description"
-            content="Senior Software Engineer at @todaytix. Currently residing in New York, New York."
+            content="Senior Software Engineer at @invitae. Currently residing in New York, New York."
           />
           <meta name="twitter:image:src" content="/static/og.png" />
 

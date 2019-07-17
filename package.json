@@ -41,7 +41,7 @@
     "webpack": "^4.22.0"
   },
   "devDependencies": {
-    "npm-upgrade": "1.4.1",
+    "npm-upgrade": "2.0.0",
     "redux-devtools-extension": "^2.13.5",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-config-styled-components": "^0.1.1",

@@ -22,11 +22,11 @@ const Section = styled.section`
   ${media.small`
     grid-template-columns: auto;
     grid-template-rows: auto;
-    padding: 0 40px;
+    padding: 0 10px;
   `};
 
   ${media.medium`
-    margin: 0 20px;
+    margin: 0 30px;
   `};
 
   ${media.large`

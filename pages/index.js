@@ -17,7 +17,7 @@ import {
 } from 'store';
 
 const ResumeInformation = styled(Information)`
-  margin: 10px 0;
+  padding: 30px 30px;
 `;
 
 const ListHeading = styled(Heading.h3)`
@@ -41,21 +41,20 @@ const Lists = styled.div`
     }
   }
 
+  ${media.large`
+    flex-wrap: wrap;
+
+    ul {
+      flex: 50%;
+    }
+  `};
+
   ${media.small`
     flex-wrap: wrap;
-
     ul {
-      flex: 50%;
+      flex: 0%;
     }
-  `};
-
-  ${media.medium`
-    flex-wrap: wrap;
-
-    ul {
-      flex: 50%;
-    }
-  `};
+  `}
 `;
 
 const GithubImage = styled.img`
@@ -64,9 +63,27 @@ const GithubImage = styled.img`
 `;
 
 const CompanyWrapper = styled.div`
+  margin-bottom: 20px;
+  display: flex;
+`;
+
+const CompanyFlex = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+`;
+
+const CompanyLogo = styled.img`
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  margin-top: 10px;
+`;
+
+const CompanyLogoDummy = styled.div`
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  margin-top: 10px;
 `;
 
 const CompanyHeading = styled(Heading.h3)`
@@ -118,11 +135,10 @@ const FooterSection = styled.footer`
   }
 
   ${media.small`
-    margin: 20px 40px;
+    margin: 20px 30px;
 
     ul li {
       margin: 0 0 10px 0;
-      display: block;
       float: left;
       text-align: left;
       width: 100%;
@@ -220,17 +236,27 @@ class Index extends Component {
             <Information heading="EXPERIENCE">
               {experienceList.map(experience => (
                 <CompanyWrapper key={experience.title}>
-                  <CompanyHeading fontSize="18px">
-                    {experience.title}
-                  </CompanyHeading>
-                  {experience.positions.map(position => (
-                    <CompanyContent key={position.role}>
-                      {position.role}{' '}
-                      <CompanyDuration>
-                        {position.from} - {position.to}
-                      </CompanyDuration>
-                    </CompanyContent>
-                  ))}
+                  {experience.logo ? (
+                    <CompanyLogo
+                      alt={`${experience.title} logo`}
+                      src={experience.logo}
+                    />
+                  ) : (
+                    <CompanyLogoDummy />
+                  )}
+                  <CompanyFlex>
+                    <CompanyHeading fontSize="18px">
+                      {experience.title}
+                    </CompanyHeading>
+                    {experience.positions.map(position => (
+                      <CompanyContent key={position.role}>
+                        {position.role}{' '}
+                        <CompanyDuration>
+                          {position.from} - {position.to}
+                        </CompanyDuration>
+                      </CompanyContent>
+                    ))}
+                  </CompanyFlex>
                 </CompanyWrapper>
               ))}
             </Information>

@@ -70,6 +70,7 @@ const CompanyWrapper = styled.div`
 const CompanyFlex = styled.div`
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 `;
 
 const CompanyLogo = styled.img`

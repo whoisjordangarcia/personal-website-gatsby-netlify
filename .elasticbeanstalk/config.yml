@@ -1,15 +1,16 @@
 branch-defaults:
   master:
-    environment: arickho-dot-com-prod
+    environment: jordangarcia-dot-me-prod
     group_suffix: null
 environment-defaults:
-  arickho-dot-com-dev:
+  jordangarcia-dot-me-dev:
     branch: null
     repository: null
 global:
-  application_name: arickho-dot-com
+  application_name: jordangarcia-dot-me
   default_ec2_keyname: null
-  default_platform: arn:aws:elasticbeanstalk:us-east-1::platform/Docker running on
+  default_platform:
+    arn:aws:elasticbeanstalk:us-east-1::platform/Docker running on
     64bit Amazon Linux/2.12.3
   default_region: us-east-1
   include_git_submodules: true

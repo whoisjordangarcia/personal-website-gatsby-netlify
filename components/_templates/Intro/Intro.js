@@ -8,7 +8,7 @@ import { media } from 'styles';
 export default function Intro() {
   return (
     <Wrapper>
-      <ProfilePhoto alt="Profile" src="/static/profile_photo.jpg" />
+      <ProfilePhoto alt="Profile" src="/static/profile_photo.jpeg" />
       <Info>
         <Heading.h2>
           Hello! <Wave />

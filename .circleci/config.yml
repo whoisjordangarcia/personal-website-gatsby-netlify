@@ -1,8 +1,4 @@
-version: 2.1
-
-orbs:
-  aws-cli: circleci/aws-cli@0.1.13
-
+version: 2
 jobs:
   install_dependencies:
     docker:
@@ -40,8 +36,15 @@ jobs:
           name: Build application
           command: NODE_ENV=staging npm run build
       - run:
+          name: Install aws cli
+          command: |
+            sudo apt-get install -y libpython2.7-dev
+            curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+            unzip awscli-bundle.zip
+            ./awscli-bundle/install -b ~/bin/aws
+      - run:
           name: Deploy to S3
-          command: aws s3 sync out/ s3://jordangarcia.me --delete
+          command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete
   build_and_deploy_to_dev_eb:
     docker:
       - image: 'circleci/python:2.7'
@@ -66,8 +69,15 @@ jobs:
           name: Build application
           command: NODE_ENV=production npm run build
       - run:
+          name: Install aws cli
+          command: |
+            sudo apt-get install -y libpython2.7-dev
+            curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+            unzip awscli-bundle.zip
+            ./awscli-bundle/install -b ~/bin/aws
+      - run:
           name: Deploy to S3
-          command: aws s3 sync out/ s3://jordangarcia.me --delete
+          command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete
   build_and_deploy_to_prod_eb:
     docker:
       - image: 'circleci/python:2.7'

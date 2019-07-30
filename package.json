@@ -1,5 +1,5 @@
 {
-  "name": "arickho-com",
+  "name": "jordangarcia-dot-me",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,12 +10,12 @@
     "interactive-upgrade": "npm-upgrade",
     "lint:css": "stylelint './**/*.js'",
     "export": "next export && npm run build",
-    "docker:build": "docker build -t arickho-dot-com .",
-    "docker:clean": "docker rm -f arickho-dot-com || true",
-    "docker:run": "docker run -p 7878:3000 -d --name arickho-dot-com arickho-dot-com && npm run docker:logs",
-    "docker:stop": "docker stop arickho-dot-com",
-    "docker:start": "docker start arickho-dot-com && npm run docker:logs",
-    "docker:logs": "docker logs -f arickho-dot-com",
+    "docker:build": "docker build -t jordangarcia-dot-me .",
+    "docker:clean": "docker rm -f jordangarcia-dot-me || true",
+    "docker:run": "docker run -p 7878:3000 -d --name jordangarcia-dot-me jordangarcia-dot-me && npm run docker:logs",
+    "docker:stop": "docker stop jordangarcia-dot-me",
+    "docker:start": "docker start jordangarcia-dot-me && npm run docker:logs",
+    "docker:logs": "docker logs -f jordangarcia-dot-me",
     "deploy": "npm run docker:build && npm run docker:clean && npm run docker:run"
   },
   "dependencies": {

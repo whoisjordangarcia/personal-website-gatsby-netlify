@@ -1,10 +1,11 @@
-# arickho.com
+# jordangarcia.me
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/arickho/arickho.com.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/arickho/jordangarcia.me/tree/master.svg?style=svg)](https://circleci.com/gh/arickho/jordangarcia.me/tree/master)
 
 Source code for my personal website. Contains a copy of my personal resume, and as well some links.
 
-View it here: [https://arickho.com](https://arickho.com)
+View it here: [https://jordangarcia.me](https://jordangarcia.me)
 
 MIT Licensed.
 

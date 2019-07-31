@@ -43,7 +43,7 @@ jobs:
             awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
-          command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete
+          command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete --acl public-read
   build_and_deploy_to_dev_eb:
     docker:
       - image: 'circleci/python:2.7'
@@ -75,7 +75,7 @@ jobs:
             awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
-          command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete
+          command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete --acl public-read
   build_and_deploy_to_prod_eb:
     docker:
       - image: 'circleci/python:2.7'

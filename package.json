@@ -29,7 +29,7 @@
     "react-dom": "16.8.6",
     "react-redux": "7.0.0",
     "react-reveal": "1.2.2",
-    "react": "16.8.6",
+    "react": "16.9.0",
     "redux-beacon": "2.1.0",
     "redux-thunk": "2.3.0",
     "redux": "4.0.4",

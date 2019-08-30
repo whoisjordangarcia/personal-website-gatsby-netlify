@@ -26,7 +26,7 @@ jobs:
       - run: npm run build
   build_and_deploy_to_dev_s3:
     docker:
-      - image: 'circleci/node:8.12.0'
+      - image: "circleci/node:8.12.0"
     steps:
       - checkout
       - restore_cache:
@@ -46,7 +46,7 @@ jobs:
           command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete --acl public-read
   build_and_deploy_to_dev_eb:
     docker:
-      - image: 'circleci/python:2.7'
+      - image: "circleci/python:2.7"
     steps:
       - checkout
       - run:
@@ -58,7 +58,7 @@ jobs:
           command: eb deploy jordangarcia-dot-me-dev
   build_and_deploy_to_prod_s3:
     docker:
-      - image: 'circleci/node:8.12.0'
+      - image: "circleci/node:8.12.0"
     steps:
       - checkout
       - restore_cache:
@@ -78,7 +78,7 @@ jobs:
           command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete --acl public-read
   build_and_deploy_to_prod_eb:
     docker:
-      - image: 'circleci/python:2.7'
+      - image: "circleci/python:2.7"
     steps:
       - checkout
       - run:

@@ -28,7 +28,7 @@ jobs:
       - save_cache:
           paths:
             - .next
-          key: v1-next-{{ checksum "package.json" }}
+          key: v1-next
 
   build_prod_app:
     docker:
@@ -46,7 +46,7 @@ jobs:
       - save_cache:
           paths:
             - .next
-          key: v1-next-{{ checksum "package.json" }}
+          key: v1-next
 
   deploy_to_dev_s3:
     docker:
@@ -55,9 +55,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-next-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-next-
+            - v1-next
       - run:
           name: Install aws cli
           command: |
@@ -75,9 +73,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-next-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-next-
+            - v1-next
       - run:
           name: Install awsebcli
           command: |
@@ -93,9 +89,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-next-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-next-
+            - v1-next
       - run:
           name: Install aws cli
           command: |
@@ -117,9 +111,7 @@ jobs:
             sudo pip install awsebcli --upgrade
       - restore_cache:
           keys:
-            - v1-next-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-next-
+            - v1-next
       - run:
           name: Deploy to Prod EB
           command: eb deploy jordangarcia-dot-me-prod

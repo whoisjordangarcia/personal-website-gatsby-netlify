@@ -99,9 +99,16 @@ workflows:
       - build_dev_app:
           requires:
             - install_dependencies
+          filters:
+            branches:
+              only: develop
+
       - build_prod_app:
           requires:
             - install_dependencies
+          filters:
+            branches:
+              only: master
 
       - deploy_to_dev_s3:
           requires:

@@ -28,7 +28,7 @@ jobs:
       - save_cache:
           paths:
             - .next
-          key: v1-next-{{ .BuildNum }}
+          key: v1-next-{{ .Revision }}
 
   build_prod_app:
     docker:
@@ -46,7 +46,7 @@ jobs:
       - save_cache:
           paths:
             - .next
-          key: v1-next-{{ .BuildNum }}
+          key: v1-next-{{ .Revision }}
 
   deploy_to_dev_s3:
     docker:
@@ -55,7 +55,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-next-{{ .BuildNum }}
+            - v1-next-{{ .Revision }}
       - run:
           name: Install aws cli
           command: |
@@ -73,7 +73,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-next-{{ .BuildNum }}
+            - v1-next-{{ .Revision }}
       - run:
           name: Install awsebcli
           command: |
@@ -89,7 +89,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-next-{{ .BuildNum }}
+            - v1-next-{{ .Revision }}
       - run:
           name: Install aws cli
           command: |
@@ -111,7 +111,7 @@ jobs:
             sudo pip install awsebcli --upgrade
       - restore_cache:
           keys:
-            - v1-next-{{ .BuildNum }}
+            - v1-next-{{ .Revision }}
       - run:
           name: Deploy to Prod EB
           command: eb deploy jordangarcia-dot-me-prod

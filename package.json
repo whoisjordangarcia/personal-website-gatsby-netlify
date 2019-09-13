@@ -38,7 +38,7 @@
     "redux": "4.0.4",
     "styled-components": "4.2.1",
     "styled-normalize": "8.0.2",
-    "webpack": "4.40.0"
+    "webpack": "4.40.1"
   },
   "devDependencies": {
     "npm-upgrade": "2.0.1",

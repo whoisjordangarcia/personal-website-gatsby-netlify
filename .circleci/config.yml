@@ -15,26 +15,30 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-  build_app:
+
+  build_dev_app:
     docker:
       - image: circleci/node:8.12.0
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-      - run: npm run build
-  build_and_deploy_to_dev_s3:
+      - run:
+          name: Build Application (Staging)
+          command: NODE_ENV=staging npm run build
+
+  build_prod_app:
+    docker:
+      - image: circleci/node:8.12.0
+    steps:
+      - checkout
+      - run:
+          name: Build Application (Production)
+          command: NODE_ENV=production npm run build
+
+  deploy_to_dev_s3:
     docker:
       - image: "circleci/node:8.12.0"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Build application
-          command: NODE_ENV=staging npm run build
       - run:
           name: Install aws cli
           command: |
@@ -44,7 +48,8 @@ jobs:
       - run:
           name: Deploy to S3
           command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete --acl public-read
-  build_and_deploy_to_dev_eb:
+
+  deploy_to_dev_eb:
     docker:
       - image: "circleci/python:2.7"
     steps:
@@ -56,17 +61,12 @@ jobs:
       - run:
           name: Deploy to Dev EB
           command: eb deploy jordangarcia-dot-me-dev
-  build_and_deploy_to_prod_s3:
+
+  deploy_to_prod_s3:
     docker:
       - image: "circleci/node:8.12.0"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Build application
-          command: NODE_ENV=production npm run build
       - run:
           name: Install aws cli
           command: |
@@ -76,7 +76,8 @@ jobs:
       - run:
           name: Deploy to S3
           command: ~/bin/aws s3 sync out/ s3://jordangarcia.me --delete --acl public-read
-  build_and_deploy_to_prod_eb:
+
+  deploy_to_prod_eb:
     docker:
       - image: "circleci/python:2.7"
     steps:
@@ -94,34 +95,36 @@ workflows:
   build_web_workflow:
     jobs:
       - install_dependencies
-      - build_app:
+
+      - build_dev_app:
           requires:
             - install_dependencies
-          filters:
-            branches:
-              ignore:
-                - master
-      - build_and_deploy_to_dev_s3:
+      - build_prod_app:
           requires:
             - install_dependencies
-          filters:
-            branches:
-              only: develop
-      - build_and_deploy_to_dev_eb:
+
+      - deploy_to_dev_s3:
           requires:
-            - install_dependencies
+            - build_dev_app
           filters:
             branches:
               only: develop
-      - build_and_deploy_to_prod_s3:
+      - deploy_to_dev_eb:
           requires:
-            - install_dependencies
+            - build_dev_app
+          filters:
+            branches:
+              only: develop
+
+      - deploy_to_prod_s3:
+          requires:
+            - build_prod_app
           filters:
             branches:
               only: master
-      - build_and_deploy_to_prod_eb:
+      - deploy_to_prod_eb:
           requires:
-            - install_dependencies
+            - build_prod_app
           filters:
             branches:
               only: master

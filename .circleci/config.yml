@@ -62,7 +62,7 @@ jobs:
             awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
-          command: ~/bin/aws s3 sync out/ s3://jordangarcia.dev.me --delete --acl public-read
+          command: ~/bin/aws s3 sync .next/ s3://jordangarcia.dev.me --delete --acl public-read
 
   deploy_to_dev_eb:
     docker:

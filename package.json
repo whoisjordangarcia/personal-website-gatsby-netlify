@@ -43,7 +43,7 @@
   "devDependencies": {
     "npm-upgrade": "2.0.1",
     "redux-devtools-extension": "2.13.5",
-    "stylelint-config-recommended": "2.2.0",
+    "stylelint-config-recommended": "3.0.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.8.0",
     "stylelint": "10.1.0"

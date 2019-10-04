@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { TimelineMax, Power0 } from 'gsap';
-import { media } from 'styles';
+
+import { device } from 'components/_styles';
 
 const BLOB_ELEMENT = 'blob-path';
 
@@ -11,14 +12,14 @@ export default class MovingBlob extends Component {
   static defaultProps = {};
 
   componentDidMount() {
-    this.timeline = new TimelineMax({
+    const timeline = new TimelineMax({
       repeat: -1,
       delay: 0,
       repeatDelay: 0,
       yoyo: true
     });
 
-    this.timeline
+    timeline
       .to(`#${BLOB_ELEMENT}`, 10, {
         attr: {
           d:
@@ -67,7 +68,7 @@ const SvgCanvas = styled.svg.attrs({
 })`
   fill: rgb(238, 80, 80);
 
-  ${media.small`
+  @media ${device.small} {
     width: 100vw;
-  `};
+  }
 `;

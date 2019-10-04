@@ -2,7 +2,7 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import { Normalize } from 'styled-normalize';
 import { ServerStyleSheet } from 'styled-components';
 
-import { FontStyles } from 'templates';
+import { FontStyles } from 'components/_templates';
 
 import { GA_TRACKING_ID } from 'store/constants';
 

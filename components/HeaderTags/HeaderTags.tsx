@@ -1,8 +1,24 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const HeaderTags = props => (
-  <React.Fragment>
+interface IProps {
+  description: string;
+  humansText: string;
+  imageHeight: string;
+  imageType: string;
+  imageUrl: string;
+  imageWidth: string;
+  jobTitle: string;
+  keywords: string;
+  locale: string;
+  shortIcon: string;
+  siteName: string;
+  title: string;
+  twitterHandle: string;
+  url: string;
+}
+
+const HeaderTags: React.FunctionComponent<IProps> = props => (
+  <>
     <meta name="theme-color" content="#000000" />
     <link rel="shortcut icon" href={props.shortIcon} />
     <link type="text/plain" rel="author" href={props.humansText} />
@@ -21,7 +37,7 @@ const HeaderTags = props => (
     <meta name="description" content={props.description} />
     <meta name="keywords" content={props.keywords} />
 
-    <meta itemProp="name" content={props.name} />
+    <meta itemProp="name" content={props.siteName} />
     <meta itemProp="description" content={props.description} />
     <meta itemProp="image" content={props.imageUrl} />
     <meta itemProp="jobTitle" content={props.jobTitle} />
@@ -33,24 +49,7 @@ const HeaderTags = props => (
     <meta name="twitter:title" content={props.title} />
     <meta name="twitter:description" content={props.description} />
     <meta name="twitter:image:src" content={props.imageUrl} />
-  </React.Fragment>
+  </>
 );
-
-HeaderTags.propTypes = {
-  description: PropTypes.string,
-  humansText: PropTypes.string,
-  imageHeight: PropTypes.string,
-  imageType: PropTypes.string,
-  imageUrl: PropTypes.string,
-  imageWidth: PropTypes.string,
-  jobTitle: PropTypes.string,
-  keywords: PropTypes.string,
-  locale: PropTypes.string,
-  shortIcon: PropTypes.string,
-  siteName: PropTypes.string,
-  title: PropTypes.string,
-  twitterHandle: PropTypes.string,
-  url: PropTypes.string
-};
 
 export default HeaderTags;

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-import waveImage from './Wave.png';
-
 export default function Wave() {
   return <StyledWave />;
 }
@@ -45,7 +43,7 @@ const waveAnimation = keyframes`
 `;
 
 const StyledWave = styled.span`
-  background-image: url(${waveImage});
+  background-image: url('/static/Wave.png');
   width: 30px;
   height: 30px;
   margin-left: 5px;

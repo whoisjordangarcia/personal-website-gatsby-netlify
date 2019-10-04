@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Wave, Heading, Link, MovingBlob } from 'components';
-import emojiImage from 'static/man-technologist.png';
-import { media } from 'styles';
+import { device } from 'components/_styles';
 
 export default function Intro() {
   return (
@@ -43,10 +42,10 @@ const Wrapper = styled.header`
   justify-content: center;
   padding: 0 20px;
 
-  ${media.small`
+  @media ${device.small} {
     flex-direction: column;
     padding: 20px 40px;
-  `};
+  }
 `;
 
 const ProfilePhoto = styled.img`
@@ -56,9 +55,9 @@ const ProfilePhoto = styled.img`
   margin-right: 80px;
   z-index: 1;
 
-  ${media.small`
+  @media ${device.small} {
     margin-right: 0;
-  `};
+  }
 `;
 
 const Info = styled.div`
@@ -69,7 +68,7 @@ const Info = styled.div`
 `;
 
 const EmojiImage = styled.span`
-  background-image: url(${emojiImage});
+  background-image: url('static/man-technologist.png');
   background-size: contain;
   width: 30px;
   height: 30px;
@@ -80,8 +79,8 @@ const BlobWrapper = styled.div`
   position: absolute;
   transform: translateX(-30%);
 
-  ${media.small`
+  @media ${device.small} {
     transform: translateX(0%) translateY(-20%);
     overflow: hidden;
-  `};
+  }
 `;

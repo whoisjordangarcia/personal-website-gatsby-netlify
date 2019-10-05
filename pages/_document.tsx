@@ -6,7 +6,11 @@ import { FontStyles } from 'components/_templates';
 
 import { GA_TRACKING_ID } from 'store/constants';
 
-export default class MyDocument extends Document {
+interface IProps {
+  styleTags: any;
+}
+
+export default class MyDocument extends Document<IProps> {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
 

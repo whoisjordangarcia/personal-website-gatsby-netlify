@@ -1,6 +1,6 @@
-const express = require('express');
-const next = require('next');
-const { parse } = require('url');
+import express from 'express';
+import next from 'next';
+import { parse } from 'url';
 
 const isProd = process.env.NODE_ENV === 'production';
 

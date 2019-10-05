@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import Fade from 'react-reveal/Fade';
 import Head from 'next/head';
 
 import { Paragraph, Heading, Link, HeaderTags } from 'components';
-import { Intro, Information } from 'templates';
-import { media } from 'styles';
+import { Intro, Information } from 'components/_templates';
+import { device } from 'components/_styles';
+import { IData } from 'models/data';
 
 import {
-  downloadClicked as downloadClickedActionCreator,
-  externalClicked as externalClickedActionCreator,
-  fetchData,
+  downloadClickedAction,
+  externalClickedAction,
+  fetchDataAction,
   getData as getDataSelector
 } from 'store';
 
@@ -41,20 +41,20 @@ const Lists = styled.div`
     }
   }
 
-  ${media.large`
+  @media ${device.large} {
     flex-wrap: wrap;
 
     ul {
       flex: 50%;
     }
-  `};
+  }
 
-  ${media.small`
+  @media ${device.small} {
     flex-wrap: wrap;
     ul {
       flex: 0%;
     }
-  `}
+  }
 `;
 
 const GithubImage = styled.img`
@@ -98,9 +98,9 @@ const CompanyContent = styled(Paragraph)`
   padding: 0;
   width: 100%;
 
-  ${media.small`
+  @media ${device.small} {
     line-height: 15px;
-  `};
+  }
 `;
 
 const CompanyDuration = styled.span`
@@ -108,14 +108,14 @@ const CompanyDuration = styled.span`
   float: right;
   font-size: 14px;
 
-  ${media.small`
+  @media ${device.small} {
     display: inline-block;
     text-align: left;
     float: none;
     width: 100%;
     font-size: 12px;
     margin-bottom: 10px;
-  `};
+  }
 `;
 
 const FooterSection = styled.footer`
@@ -135,7 +135,7 @@ const FooterSection = styled.footer`
     }
   }
 
-  ${media.small`
+  @media ${device.small} {
     margin: 20px 30px;
 
     ul li {
@@ -144,19 +144,20 @@ const FooterSection = styled.footer`
       text-align: left;
       width: 100%;
     }
-  `};
+  }
 `;
 
-class Index extends Component {
-  static async getInitialProps({ reduxStore }) {
-    reduxStore.dispatch(fetchData());
+interface IProps {
+  downloadClicked: (event: React.MouseEvent) => void;
+  externalClicked: (event: React.MouseEvent) => void;
+  data: IData;
+}
+
+class Index extends React.Component<IProps> {
+  static async getInitialProps({ store }) {
+    store.dispatch(fetchDataAction());
     return {};
   }
-
-  static propTypes = {
-    data: PropTypes.shape(),
-    downloadClicked: PropTypes.func.isRequired
-  };
 
   handleOnDownloadCVClick = event => {
     this.props.downloadClicked(event.target.href);
@@ -178,7 +179,7 @@ class Index extends Component {
     } = data;
 
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>Who is Jordan Garcia?</title>
           <HeaderTags {...data.headers} />
@@ -283,7 +284,7 @@ class Index extends Component {
             </FooterSection>
           </div>
         </Fade>
-      </React.Fragment>
+      </>
     );
   }
 }
@@ -291,7 +292,7 @@ class Index extends Component {
 export default connect(
   state => ({ data: getDataSelector(state) }),
   {
-    downloadClicked: downloadClickedActionCreator,
-    externalClicked: externalClickedActionCreator
+    downloadClicked: downloadClickedAction,
+    externalClicked: externalClickedAction
   }
 )(Index);

@@ -1,6 +1,6 @@
 import jsonData from 'static/who-is-jordan-garcia.json';
 
-const initialState = {
+export const initialState = {
   data: null
 };
 
@@ -26,22 +26,19 @@ export const reducer = (state = initialState, action) => {
 };
 
 // ACTIONS
-export const downloadClicked = target => dispatch =>
-  dispatch({
-    type: actionTypes.DOWNLOAD_CLICKED,
-    target
-  });
+export const downloadClickedAction = target => ({
+  type: actionTypes.DOWNLOAD_CLICKED,
+  target
+});
 
-export const externalClicked = target => dispatch =>
-  dispatch({
-    type: actionTypes.EXTERNAL_CLICKED,
-    target
-  });
+export const externalClickedAction = target => ({
+  type: actionTypes.EXTERNAL_CLICKED,
+  target
+});
 
-export const setData = data => dispatch =>
-  dispatch({
-    type: actionTypes.SET_DATA,
-    data: data
-  });
+export const setDataAction = data => ({
+  type: actionTypes.SET_DATA,
+  data: data
+});
 
-export const fetchData = () => dispatch => dispatch(setData(jsonData));
+export const fetchDataAction = () => setDataAction(jsonData);

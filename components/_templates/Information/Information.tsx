@@ -1,16 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { media } from 'styles';
+import { device } from 'components/_styles';
 import { Heading } from 'components';
 
 const SectionHeading = styled(Heading.h2)`
   text-align: right;
 
-  ${media.small`
+  @media ${device.small} {
     text-align: left;
-  `};
+  }
 `;
 
 const Section = styled.section`
@@ -19,27 +18,25 @@ const Section = styled.section`
   max-width: 1000px;
   grid-template-columns: 35% 65%;
 
-  ${media.small`
+  @media ${device.small} {
     grid-template-columns: auto;
     grid-template-rows: auto;
     padding: 0 10px;
-  `};
-
-  ${media.medium`
+  }
+  @media ${device.medium} {
     margin: 0 30px;
-  `};
-
-  ${media.large`
+  }
+  @media ${device.large} {
     margin: 0 20px;
-  `};
+  }
 `;
 
 const Content = styled.div`
   padding-left: 100px;
 
-  ${media.small`
+  @media ${device.small} {
     padding-left: 0px;
-  `};
+  }
 `;
 
 export default function Information({ heading, children }) {
@@ -52,13 +49,3 @@ export default function Information({ heading, children }) {
     </Section>
   );
 }
-
-Information.propTypes = {
-  children: PropTypes.node,
-  heading: PropTypes.string
-};
-
-Information.defaultProps = {
-  children: null,
-  heading: null
-};

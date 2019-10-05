@@ -8,7 +8,7 @@ jobs:
       - run: npm install --silent --progress=false
       - save_cache:
           paths:
-            - .next
+            - node_modules
           key: v1-dependencies-{{ .Revision }}
 
   build_dev_app:

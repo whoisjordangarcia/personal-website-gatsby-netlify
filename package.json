@@ -8,7 +8,7 @@
     "build": "next build",
     "interactive-upgrade": "npm-upgrade",
     "lint:css": "stylelint './**/*.js'",
-    "export": "next export && npm run build",
+    "export": "npm run build && next export",
     "docker:build": "docker build -t jordangarcia-dot-me .",
     "docker:clean": "docker rm -f jordangarcia-dot-me || true",
     "docker:run": "docker run -p 7878:3000 -d --name jordangarcia-dot-me jordangarcia-dot-me && npm run docker:logs",

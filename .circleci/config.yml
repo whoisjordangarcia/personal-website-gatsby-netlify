@@ -1,56 +1,12 @@
 version: 2
 jobs:
-  install_dependencies:
-    docker:
-      - image: circleci/node:8.12.0
-    steps:
-      - checkout
-      - run: npm install --silent --progress=false
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ .Revision }}
-
-  build_dev_app:
-    docker:
-      - image: circleci/node:8.12.0
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Revision }}
-      - run:
-          name: Build Application (Staging)
-          command: NODE_ENV=staging npm run build
-      - save_cache:
-          paths:
-            - .next
-          key: v1-next-{{ .Revision }}
-
-  build_prod_app:
-    docker:
-      - image: circleci/node:8.12.0
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Revision }}
-      - run:
-          name: Build Application (Production)
-          command: NODE_ENV=production npm run build
-      - save_cache:
-          paths:
-            - .next
-          key: v1-next-{{ .Revision }}
-
   deploy_to_dev_s3:
     docker:
       - image: "circleci/node:8.12.0"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-next-{{ .Revision }}
+      - run: npm install --silent --progress=false
+      - run: npm run export
       - run:
           name: Install aws cli
           command: |
@@ -59,32 +15,19 @@ jobs:
             awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
-          command: ~/bin/aws s3 sync .next/ s3://jordangarcia.dev.me/_next --delete
-
-  deploy_to_dev_eb:
-    docker:
-      - image: "circleci/python:2.7"
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-next-{{ .Revision }}
-      - run:
-          name: Install awsebcli
           command: |
-            sudo pip install awsebcli --upgrade
-      - run:
-          name: Deploy to Dev EB
-          command: eb deploy jordangarcia-dot-me-dev
+            ~/bin/aws s3 sync out/.next/ s3://jordangarcia.dev.me/_next --delete
+            ~/bin/aws s3 sync out/static/ s3://jordangarcia.dev.me/static --delete
+            ~/bin/aws s3 sync out/404.html s3://jordangarcia.dev.me/404.html --delete
+            ~/bin/aws s3 cp out/index.html s3://jordangarcia.dev.me/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
 
   deploy_to_prod_s3:
     docker:
       - image: "circleci/node:8.12.0"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-next-{{ .Revision }}
+      - run: npm install --silent --progress=false
+      - run: npm run export
       - run:
           name: Install aws cli
           command: |
@@ -93,54 +36,17 @@ jobs:
             awscli-bundle/install -b ~/bin/aws
       - run:
           name: Deploy to S3
-          command: ~/bin/aws s3 sync .next/ s3://jordangarcia.me/_next --delete
-
-  deploy_to_prod_eb:
-    docker:
-      - image: "circleci/python:2.7"
-    steps:
-      - checkout
-      - run:
-          name: Install awsebcli
           command: |
-            sudo pip install awsebcli --upgrade
-      - restore_cache:
-          keys:
-            - v1-next-{{ .Revision }}
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ .Revision }}
-      - run:
-          name: Deploy to Prod EB
-          command: eb deploy jordangarcia-dot-me-prod
+            ~/bin/aws s3 sync out/.next/ s3://jordangarcia.me/_next --delete
+            ~/bin/aws s3 sync out/static/ s3://jordangarcia.me/static --delete
+            ~/bin/aws s3 sync out/404.html s3://jordangarcia.me/404.html --delete
+            ~/bin/aws s3 cp out/index.html s3://jordangarcia.me/index.html --metadata-directive REPLACE --cache-control max-age=0,no-cache,no-store,must-revalidate --content-type text/html --acl public-read
 
 workflows:
   version: 2
   build_web_workflow:
     jobs:
-      - install_dependencies
-
-      - build_dev_app:
-          requires:
-            - install_dependencies
-          filters:
-            branches:
-              only: develop
-
-      - build_prod_app:
-          requires:
-            - install_dependencies
-          filters:
-            branches:
-              only: master
-
       - deploy_to_dev_s3:
-          requires:
-            - build_dev_app
-          filters:
-            branches:
-              only: develop
-      - deploy_to_dev_eb:
           requires:
             - build_dev_app
           filters:
@@ -148,12 +54,6 @@ workflows:
               only: develop
 
       - deploy_to_prod_s3:
-          requires:
-            - build_prod_app
-          filters:
-            branches:
-              only: master
-      - deploy_to_prod_eb:
           requires:
             - build_prod_app
           filters:

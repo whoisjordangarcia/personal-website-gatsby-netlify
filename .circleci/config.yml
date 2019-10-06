@@ -104,10 +104,10 @@ jobs:
           name: Install awsebcli
           command: |
             sudo pip install awsebcli --upgrade
-      - restore_next_cache:
+      - restore_cache:
           keys:
             - v1-next-{{ .Revision }}
-      - restore_node_modules_cache:
+      - restore_cache:
           keys:
             - v1-dependencies-{{ .Revision }}
       - run:

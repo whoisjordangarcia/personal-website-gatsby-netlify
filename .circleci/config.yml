@@ -104,10 +104,12 @@ jobs:
           name: Install awsebcli
           command: |
             sudo pip install awsebcli --upgrade
-      - restore_cache:
+      - restore_next_cache:
+          keys:
+            - v1-next-{{ .Revision }}
+      - restore_node_modules_cache:
           keys:
             - v1-dependencies-{{ .Revision }}
-            - v1-next-{{ .Revision }}
       - run:
           name: Deploy to Prod EB
           command: eb deploy jordangarcia-dot-me-prod

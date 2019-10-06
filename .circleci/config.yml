@@ -47,15 +47,11 @@ workflows:
   build_web_workflow:
     jobs:
       - deploy_to_dev_s3:
-          requires:
-            - build_dev_app
           filters:
             branches:
               only: develop
 
       - deploy_to_prod_s3:
-          requires:
-            - build_prod_app
           filters:
             branches:
               only: master

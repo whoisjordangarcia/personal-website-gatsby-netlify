@@ -18,7 +18,7 @@
     "deploy": "npm run docker:build && npm run docker:clean && npm run docker:run"
   },
   "dependencies": {
-    "@babel/core": "7.6.2",
+    "@babel/core": "7.6.3",
     "@redux-beacon/google-analytics-gtag": "1.0.5",
     "babel-plugin-module-resolver": "3.2.0",
     "babel-plugin-styled-components": "1.10.6",

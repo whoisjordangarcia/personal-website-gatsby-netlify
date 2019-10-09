@@ -39,7 +39,7 @@
     "webpack": "4.41.0"
   },
   "devDependencies": {
-    "@types/node": "12.7.11",
+    "@types/node": "12.7.12",
     "@types/react": "16.9.5",
     "npm-upgrade": "2.0.2",
     "redux-devtools-extension": "2.13.8",

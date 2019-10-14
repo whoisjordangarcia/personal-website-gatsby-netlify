@@ -40,7 +40,7 @@
   },
   "devDependencies": {
     "@types/node": "12.7.11",
-    "@types/react": "16.9.5",
+    "@types/react": "16.9.6",
     "npm-upgrade": "2.0.2",
     "redux-devtools-extension": "2.13.8",
     "stylelint": "11.0.0",

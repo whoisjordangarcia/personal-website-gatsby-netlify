@@ -8,6 +8,13 @@ interface IProps {
 }
 
 const Layout: React.FC<IProps> = ({children}) => {
+  const onFooterClick = (title: string) => {
+    window.dataLayer.push({
+      event: 'click',
+      link: title
+    })
+  }
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,6 +36,7 @@ const Layout: React.FC<IProps> = ({children}) => {
           {title: 'Twitter', url: 'https://twitter.com/whoismrgarcia'},
           {title: 'Instagram', url: 'https://www.instagram.com/whoisjordangarcia/'}
         ]}
+        onClick={onFooterClick}
       />
     </>
   )

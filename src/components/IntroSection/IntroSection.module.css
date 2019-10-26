@@ -1,15 +1,14 @@
 .wrapper {
-  align-items: center;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   justify-content: center;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .introText {
   font-weight: 300;
-  font-size: 35px;
-  color: #4c4c4c;
+  font-size: 28px;
 }
 
 .introText span {
@@ -26,7 +25,7 @@
 .introSection a,
 .introSection a:visited {
   font-weight: normal;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
   position: relative;
   color: #4c4c4c;
@@ -39,14 +38,37 @@
 }
 
 .profilePhoto {
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  margin-right: 80px;
   z-index: 1;
+  margin-bottom: 20px;
 }
 
 .blobWrapper {
   position: absolute;
   transform: translateX(-30%);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .introText {
+    font-weight: 300;
+    font-size: 35px;
+    color: #4c4c4c;
+  }
+
+  .profilePhoto {
+    width: 170px;
+    height: 170px;
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024px) {
 }

@@ -1,0 +1,49 @@
+.wrapper {
+  display: block;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list li {
+  margin-right: 4px;
+}
+
+.list li::after {
+  content: ',';
+}
+
+.list li:last-child::after {
+  content: '';
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: flex;
+  }
+
+  .list {
+    display: block;
+  }
+
+  .list li {
+    margin-right: 0;
+  }
+
+  .list li::after {
+    content: '';
+  }
+}
+
+@media (min-width: 1024px) {
+}

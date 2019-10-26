@@ -1,0 +1,28 @@
+.footer {
+  display: grid;
+  margin: 50px 50px 20px 50px;
+}
+
+.list {
+  list-style: none;
+  float: right;
+  -webkit-padding-start: 0;
+}
+
+.listItem {
+  float: right;
+  text-align: right;
+  margin-left: 20px;
+  min-width: 100px;
+}
+
+.link,
+.link:visited {
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  color: #ee5050;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+}

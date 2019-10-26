@@ -1,52 +1,52 @@
 {
-  "name": "jordangarcia-dot-me",
-  "version": "1.0.0",
+  "name": "gatsby-starter-default",
   "private": true,
-  "scripts": {
-    "dev": "next",
-    "start": "next start",
-    "build": "next build",
-    "interactive-upgrade": "npm-upgrade",
-    "lint:css": "stylelint './**/*.js'",
-    "export": "npm run build && next export",
-    "docker:build": "docker build -t jordangarcia-dot-me .",
-    "docker:clean": "docker rm -f jordangarcia-dot-me || true",
-    "docker:run": "docker run -p 7878:3000 -d --name jordangarcia-dot-me jordangarcia-dot-me && npm run docker:logs",
-    "docker:stop": "docker stop jordangarcia-dot-me",
-    "docker:start": "docker start jordangarcia-dot-me && npm run docker:logs",
-    "docker:logs": "docker logs -f jordangarcia-dot-me",
-    "deploy": "npm run docker:build && npm run docker:clean && npm run docker:run"
-  },
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@babel/core": "7.6.2",
-    "@redux-beacon/google-analytics-gtag": "1.0.5",
-    "babel-plugin-module-resolver": "3.2.0",
-    "babel-plugin-styled-components": "1.10.6",
-    "express": "4.17.1",
-    "gsap": "2.1.3",
-    "isomorphic-unfetch": "3.0.0",
-    "next": "9.0.7",
-    "next-redux-wrapper": "4.0.0",
-    "react": "16.10.2",
-    "react-dom": "16.10.2",
-    "react-redux": "7.1.1",
-    "react-reveal": "1.2.2",
-    "redux": "4.0.4",
-    "redux-beacon": "2.1.0",
-    "redux-thunk": "2.3.0",
-    "styled-components": "4.4.0",
-    "styled-normalize": "8.0.6",
-    "webpack": "4.41.0"
+    "gatsby": "^2.17.4",
+    "gatsby-image": "^2.2.29",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-offline": "^3.0.16",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-transformer-sharp": "^2.3.0",
+    "gsap": "^2.1.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@types/node": "12.7.11",
-    "@types/react": "16.9.5",
-    "npm-upgrade": "2.0.2",
-    "redux-devtools-extension": "2.13.8",
-    "stylelint": "11.0.0",
-    "stylelint-config-recommended": "3.0.0",
-    "stylelint-config-styled-components": "0.1.1",
-    "stylelint-processor-styled-components": "1.8.0",
-    "typescript": "3.6.3"
+    "@types/gsap": "^1.20.2",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "@types/react-helmet": "^5.0.13",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

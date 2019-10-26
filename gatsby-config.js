@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
+  pathPrefix: '/jordangarcia.me',
   siteMetadata: {
     title: `Who is Jordan Garcia?`,
     description: `Senior Software Engineer at @invitae. Currently residing in New York, New York.`,

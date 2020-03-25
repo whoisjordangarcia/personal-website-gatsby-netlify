@@ -4,7 +4,7 @@ import Wave from '../Wave/Wave'
 import MovingBlob from '../MovingBlob/MovingBlob'
 import TechnologistIcon from '../TechnologistIcon/TechnologistIcon'
 
-import profilePhoto from '../../images/profile_photo.jpeg'
+import profilePhoto from '../../images/profile_photo2.jpg'
 
 import styles from './IntroSection.module.css'
 
@@ -16,7 +16,7 @@ const IntroSection: React.FC = () => (
         Hello! <Wave />
       </h1>
       <h2 className={styles.introText}>
-        I'm <span>Jordan Garcia</span>, a senior software engineer at{' '}
+        I'm <span>Jordan Garcia</span>, a technical lead at{' '}
         <a href="https://invitae.com" target="_blank" rel="noopener noreferrer">
           @invitae
         </a>

@@ -1,9 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "jordangarcia.me",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Jordan's personal website",
+  "version": "1.0.0",
+  "author": "Jordan Garcia <arickho@gmail.com>",
+  "repository": "https://github.com/arickho/whoisjordangarcia.me",
   "dependencies": {
     "gatsby": "^2.17.4",
     "gatsby-image": "^2.2.29",
@@ -33,10 +34,6 @@
     "prettier": "^1.18.2",
     "typescript": "^3.6.4"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -45,12 +42,5 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

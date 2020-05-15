@@ -16,6 +16,8 @@
   </a>
 </p>
 
+![Personal Website](./static/demo.png 'Personal Website')
+
 ## 🛠 Installation & Setup
 
 1. Install Node using [NVM](https://github.com/nvm-sh/nvm)

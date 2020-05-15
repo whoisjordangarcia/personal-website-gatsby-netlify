@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/camelcase */
+const path = require('path')
+
 module.exports = {
   pathPrefix: '/jordangarcia.me',
   siteMetadata: {
@@ -85,6 +87,19 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-typescript`
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          components: path.resolve(__dirname, 'src/components'),
+          pages: path.resolve(__dirname, 'src/components'),
+          static: path.resolve(__dirname, 'src/static'),
+          styles: path.resolve(__dirname, 'src/styles'),
+          images: path.resolve(__dirname, 'src/images')
+        },
+        extensions: ['tsx', 'ts', 'css']
+      }
+    }
   ]
 }

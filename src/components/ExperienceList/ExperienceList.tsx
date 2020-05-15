@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from './ExperienceList.module.css'
 
-interface IExperience {
+interface Experience {
   companyName: string
   roles: {
     title: string
@@ -14,22 +14,26 @@ interface IExperience {
   }
 }
 
-interface IProps {
-  experiences: IExperience[]
+interface Props {
+  experiences: Experience[]
 }
 
-const renderItems = (experiences: IExperience[]) =>
-  experiences.map(item => (
-    <div className={styles.experience}>
+const renderItems = (experiences: Experience[]): React.ReactNode =>
+  experiences.map((item) => (
+    <div key={item.companyName} className={styles.experience}>
       {item.logo ? (
-        <img alt={item.logo.alt} src={item.logo.image} className={styles.logo} />
+        <img
+          alt={item.logo.alt}
+          src={item.logo.image}
+          className={styles.logo}
+        />
       ) : (
         <div className={styles.logo}></div>
       )}
       <div className={styles.company}>
         <h3 className={styles.companyName}>{item.companyName}</h3>
-        {item.roles.map(role => (
-          <p className={styles.role}>
+        {item.roles.map((role) => (
+          <p key={role.title} className={styles.role}>
             {role.title}
             <span>{role.duration}</span>
           </p>
@@ -38,6 +42,8 @@ const renderItems = (experiences: IExperience[]) =>
     </div>
   ))
 
-const ExperienceList: React.FC<IProps> = ({experiences}) => <div>{renderItems(experiences)}</div>
+const ExperienceList: React.FC<Props> = ({ experiences }) => (
+  <div>{renderItems(experiences)}</div>
+)
 
 export default ExperienceList

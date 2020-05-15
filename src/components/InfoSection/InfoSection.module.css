@@ -24,7 +24,6 @@
 .content h3 {
   font-size: 18px;
   line-height: 45px;
-  font-size: 18px;
   font-weight: 500;
   margin: 0 10px 0 0;
   padding: 0;
@@ -66,7 +65,4 @@
     padding-left: 100px;
     margin: 0;
   }
-}
-
-@media (min-width: 1024px) {
 }

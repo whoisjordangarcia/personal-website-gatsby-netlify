@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Wave from '../Wave/Wave'
-import MovingBlob from '../MovingBlob/MovingBlob'
-import TechnologistIcon from '../TechnologistIcon/TechnologistIcon'
+import Wave from 'components/Wave/Wave'
+import MovingBlob from 'components/MovingBlob/MovingBlob'
+import TechnologistIcon from 'components/TechnologistIcon/TechnologistIcon'
 
-import profilePhoto from '../../images/profile_photo2.jpg'
+import profilePhoto from 'images/profile_photo2.jpg'
 
 import styles from './IntroSection.module.css'
 
@@ -16,11 +16,12 @@ const IntroSection: React.FC = () => (
         Hello! <Wave />
       </h1>
       <h2 className={styles.introText}>
-        I'm <span>Jordan Garcia</span>, a technical lead at{' '}
+        I&apos;m <span>Jordan Garcia</span>, a technical lead at{' '}
         <a href="https://invitae.com" target="_blank" rel="noopener noreferrer">
           @invitae
         </a>
-        . An aussie "aw-see" (\ä-s\) currently residing in new york. <TechnologistIcon />
+        . An aussie &quot;aw-see&quot; (\ä-s\) currently residing in new york.{' '}
+        <TechnologistIcon />
       </h2>
     </div>
     <div className={styles.blobWrapper}>

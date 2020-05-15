@@ -29,7 +29,6 @@
   text-decoration: none;
   position: relative;
   color: #4c4c4c;
-  font-weight: normal;
   border-bottom: 2px solid transparent;
 }
 
@@ -68,7 +67,4 @@
     margin-right: 80px;
     margin-bottom: 0;
   }
-}
-
-@media (min-width: 1024px) {
 }

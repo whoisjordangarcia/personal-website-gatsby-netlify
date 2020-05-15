@@ -1,4 +1,4 @@
 module.exports = {
-  'src/**/*.{ts,tsx}': ['eslint --fix'],
-  'src/**/*.scss': ['stylelint --syntax scss --fix'],
+  'src/**/*.{ts,tsx}': ['npm run lint -- --quiet'],
+  'src/**/*.css': ['npm run stylelint'],
 }

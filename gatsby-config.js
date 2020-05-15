@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Who is Jordan Garcia?`,
     description: `Senior Software Engineer at @invitae. Currently residing in New York, New York.`,
-    author: `@whoisjordangarcia`
+    author: `@whoisjordangarcia`,
   },
   plugins: [
     {
@@ -21,13 +21,13 @@ module.exports = {
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         // Defaults to null
-        defaultDataLayer: {platform: 'gatsby'}
+        defaultDataLayer: { platform: 'gatsby' },
 
         // Specify optional GTM environment details.
         //gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
         //gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME',
         //dataLayerName: 'YOUR_DATA_LAYER_NAME'
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -42,7 +42,7 @@ module.exports = {
         // Avoids sending pageview hits from custom paths
         exclude: ['/preview/**', '/do-not-track/me/too/'],
         // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0
+        pageTransitionDelay: 0,
         // Enables Google Optimize using your container Id
         //optimizeId: 'YOUR_GOOGLE_OPTIMIZE_TRACKING_ID',
         // Enables Google Optimize Experiment ID
@@ -53,22 +53,22 @@ module.exports = {
         //sampleRate: 5,
         //siteSpeedSampleRate: 10,
         //cookieDomain: 'example.com'
-      }
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `static`,
-        path: `${__dirname}/src/static`
-      }
+        path: `${__dirname}/src/static`,
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -81,8 +81,8 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/man-technologist-icon.png`
-      }
+        icon: `src/images/man-technologist-icon.png`,
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
@@ -96,10 +96,10 @@ module.exports = {
           pages: path.resolve(__dirname, 'src/components'),
           static: path.resolve(__dirname, 'src/static'),
           styles: path.resolve(__dirname, 'src/styles'),
-          images: path.resolve(__dirname, 'src/images')
+          images: path.resolve(__dirname, 'src/images'),
         },
-        extensions: ['tsx', 'ts', 'css']
-      }
-    }
-  ]
+        extensions: ['tsx', 'ts', 'css'],
+      },
+    },
+  ],
 }

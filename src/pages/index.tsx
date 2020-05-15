@@ -12,101 +12,164 @@ import tigerspikeLogo from 'static/logos/tigerspike-logo.png'
 import todaytixLogo from 'static/logos/todaytix-logo.png'
 import cv from 'static/resume/jordan_garcia_oct_18_cv.pdf'
 
-const IndexPage = () => {
-  const onCvClick = () => {
+const IndexPage = (): React.ReactNode => {
+  const onCvClick = (): void => {
     window.dataLayer.push({
       event: 'click',
-      link: 'cv'
+      link: 'cv',
     })
   }
 
   return (
     <Layout>
       <Seo title="Home" />
+
       <IntroSection />
+
       <InfoSection title="Background">
         <p>
-          Software engineer on an assortment of technical projects, consistently recognised for achievements through my
-          education and into my professional career. I enjoy discovering clever solutions to complex problems in all
-          aspects of my field.
+          Software engineer on an assortment of technical projects, consistently
+          recognised for achievements through my education and into my
+          professional career. I enjoy discovering clever solutions to complex
+          problems in all aspects of my field.
         </p>
         <p>
-          <strong>When I’m not in front of the computer screen coding</strong>, I’m probably finding the next place to
-          eat on ‘The Infatuation’, exploring the five boroughs of new york, or crossing off another item on my bucket
-          list.
+          <strong>When I’m not in front of the computer screen coding</strong>,
+          I’m probably finding the next place to eat on ‘The Infatuation’,
+          exploring the five boroughs of new york, or crossing off another item
+          on my bucket list.
         </p>
       </InfoSection>
+
       <InfoSection title="Skills">
         <SkillList
           skills={[
             {
               heading: 'Frontend',
-              items: ['Typescript', 'React', 'Redux', 'Graphql', 'Webpack', 'Jest', 'Cypress']
+              items: [
+                'Typescript',
+                'React',
+                'Redux',
+                'Graphql',
+                'Webpack',
+                'Jest',
+                'Cypress',
+              ],
             },
             {
               heading: 'Backend',
-              items: ['Python', 'Node', 'Golang', 'C#', 'Redis', 'MySQL', 'MongoDB']
+              items: [
+                'Python',
+                'Node',
+                'Golang',
+                'C#',
+                'Redis',
+                'MySQL',
+                'MongoDB',
+              ],
             },
             {
               heading: 'Infra',
-              items: ['Docker', 'Kubernetes', 'FluxCD', 'Jenkins', 'Ansible', 'NGINX']
+              items: [
+                'Docker',
+                'Kubernetes',
+                'FluxCD',
+                'Jenkins',
+                'Ansible',
+                'NGINX',
+              ],
             },
             {
               heading: 'Design',
-              items: ['Sketch', 'Zeplin', 'InVision', 'Photoshop', 'Prototyping', 'Wireframing']
-            }
+              items: [
+                'Sketch',
+                'Zeplin',
+                'InVision',
+                'Photoshop',
+                'Prototyping',
+                'Wireframing',
+              ],
+            },
           ]}
         />
       </InfoSection>
+
       <InfoSection>
-        <a href={cv} target="_blank" rel="noopener noreferrer" onClick={onCvClick}>
+        <a
+          href={cv}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={onCvClick}
+        >
           View my resume
         </a>
       </InfoSection>
+
       <InfoSection title="Contribution">
         <img
           src="https://ghchart.rshah.org/EE5050/arickho"
-          style={{width: '100%'}}
+          style={{ width: '100%' }}
           alt="Jordan Garcia's Github chart"
         />
       </InfoSection>
+
       <InfoSection title="Experience">
         <ExperienceList
           experiences={[
             {
               companyName: 'Invitae, NY',
               roles: [
-                {title: 'Technical Lead', duration: 'Dec 19’ - Present'},
-                {title: 'Senior Software Engineer', duration: 'Nov 18’ - Dec 19’'}
+                { title: 'Technical Lead', duration: 'Dec 19’ - Present' },
+                {
+                  title: 'Senior Software Engineer',
+                  duration: 'Nov 18’ - Dec 19’',
+                },
               ],
-              logo: {alt: 'Invitae, NYC logo', image: invitaeLogo}
+              logo: { alt: 'Invitae, NYC logo', image: invitaeLogo },
             },
             {
               companyName: 'TodayTix, NY',
-              roles: [{title: 'Senior Software Engineer', duration: 'Oct 17’ - Oct 18’'}],
-              logo: {alt: 'TodayTix, NYC logo', image: todaytixLogo}
+              roles: [
+                {
+                  title: 'Senior Software Engineer',
+                  duration: 'Oct 17’ - Oct 18’',
+                },
+              ],
+              logo: { alt: 'TodayTix, NYC logo', image: todaytixLogo },
             },
             {
               companyName: 'Tigerspike, NY',
               roles: [
-                {title: 'Senior Software Engineer', duration: 'Jul 16’ - Oct 17’'},
-                {title: 'Software Engineer', duration: 'Sept 15’ - Jul 16’'}
+                {
+                  title: 'Senior Software Engineer',
+                  duration: 'Jul 16’ - Oct 17’',
+                },
+                { title: 'Software Engineer', duration: 'Sept 15’ - Jul 16’' },
               ],
-              logo: {alt: 'Tigerspike, NYC logo', image: tigerspikeLogo}
+              logo: { alt: 'Tigerspike, NYC logo', image: tigerspikeLogo },
             },
             {
               companyName: 'Tigerspike, SYD',
-              roles: [{title: 'Software Engineer', duration: 'Feb 14’ - Sept 15’'}],
-              logo: {alt: 'Tigerspike, SYD logo', image: tigerspikeLogo}
+              roles: [
+                { title: 'Software Engineer', duration: 'Feb 14’ - Sept 15’' },
+              ],
+              logo: { alt: 'Tigerspike, SYD logo', image: tigerspikeLogo },
             },
             {
               companyName: 'Western Australia Police Airwing, PER',
-              roles: [{title: 'Software Developer', duration: 'Jul 11’ - Jan 14’'}]
+              roles: [
+                { title: 'Software Developer', duration: 'Jul 11’ - Jan 14’' },
+              ],
             },
             {
               companyName: 'Simbiotic, PER',
-              roles: [{title: 'Software Developer / Designer', duration: 'Jul 11’ - Nov 11’'}]
-            }
+              roles: [
+                {
+                  title: 'Software Developer / Designer',
+                  duration: 'Jul 11’ - Nov 11’',
+                },
+              ],
+            },
           ]}
         />
       </InfoSection>

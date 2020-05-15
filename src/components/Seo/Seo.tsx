@@ -1,14 +1,14 @@
 import React from 'react'
-import {Helmet} from 'react-helmet'
-import {useStaticQuery, graphql} from 'gatsby'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
-interface IProps {
+interface Props {
   description?: string
   lang?: string
   title: string
 }
 
-interface IGraphData {
+interface GraphData {
   site: {
     siteMetadata: {
       title: string
@@ -18,8 +18,8 @@ interface IGraphData {
   }
 }
 
-const Seo: React.FC<IProps> = ({description, lang, title}) => {
-  const {site}: IGraphData = useStaticQuery(
+const Seo: React.FC<Props> = ({ description, lang, title }) => {
+  const { site }: GraphData = useStaticQuery(
     graphql`
       query {
         site {
@@ -38,43 +38,43 @@ const Seo: React.FC<IProps> = ({description, lang, title}) => {
   return (
     <Helmet
       htmlAttributes={{
-        lang
+        lang,
       }}
       title={title}
       titleTemplate={site.siteMetadata.title}
       meta={[
         {
           name: `description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:title`,
-          content: title
+          content: title,
         },
         {
           property: `og:description`,
-          content: metaDescription
+          content: metaDescription,
         },
         {
           property: `og:type`,
-          content: `website`
+          content: `website`,
         },
         {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription
-        }
+          content: metaDescription,
+        },
       ]}
     />
   )

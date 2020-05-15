@@ -6,9 +6,9 @@
 <h1 align="center">
   jordangarcia.me - v2
 </h1>
-
-The second iteration of [jordangarcia.me](https://jordangarcia.me) built with [Gatsby](https://gatsby.com) and hosted with [Netlify](https://netlify.com)
-
+<p align="center">
+  The second iteration of <a href="https://jordangarcia.me">jordangarcia.me</a> built with <a href="https://gatsby.com">Gatsby</a> and hosted with <a href="https://netlify.com">Netlify</a>
+</p>
 
 ## 🛠 Installation & Setup
 

@@ -1,12 +1,5 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
-import Helmet from 'react-helmet'
+import {Helmet} from 'react-helmet'
 import {useStaticQuery, graphql} from 'gatsby'
 
 interface IProps {
@@ -24,7 +17,8 @@ interface IGraphData {
     }
   }
 }
-const SEO: React.FC<IProps> = ({description, lang, title}) => {
+
+const SeoData: React.FC<IProps> = ({description, lang, title}) => {
   const {site}: IGraphData = useStaticQuery(
     graphql`
       query {
@@ -86,4 +80,4 @@ const SEO: React.FC<IProps> = ({description, lang, title}) => {
   )
 }
 
-export default SEO
+export default SeoData

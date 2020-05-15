@@ -10,7 +10,7 @@
 The second iteration of [jordangarcia.me](https://jordangarcia.me) built with [Gatsby](https://gatsby.com) and hosted with [Netlify](https://netlify.com)
 
 
-### 🛠 Installation & Setup
+## 🛠 Installation & Setup
 
 1. Install Node using [NVM](https://github.com/nvm-sh/nvm)
 
@@ -30,7 +30,7 @@ npm install
 npm run start
 ```
 
-### 🚀 Build Application
+## 🚀 Build Application
 
 1. Generate static bundle assets
 

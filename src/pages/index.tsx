@@ -1,16 +1,16 @@
 import React from 'react'
 
-import ExperienceList from '../components/ExperienceList/ExperienceList'
-import InfoSection from '../components/InfoSection/InfoSection'
-import IntroSection from '../components/IntroSection/IntroSection'
-import Layout from '../components/Layout'
-import SEO from '../components/Seo'
-import SkillList from '../components/SkillList/SkillList'
+import ExperienceList from 'components/ExperienceList/ExperienceList'
+import InfoSection from 'components/InfoSection/InfoSection'
+import IntroSection from 'components/IntroSection/IntroSection'
+import Layout from 'components/Layout'
+import SeoData from 'components/SeoData/SeoData'
+import SkillList from 'components/SkillList/SkillList'
 
-import invitaeLogo from '../static/logos/invitae-logo.png'
-import tigerspikeLogo from '../static/logos/tigerspike-logo.png'
-import todaytixLogo from '../static/logos/todaytix-logo.png'
-import cv from '../static/resume/jordan_garcia_oct_18_cv.pdf'
+import invitaeLogo from 'static/logos/invitae-logo.png'
+import tigerspikeLogo from 'static/logos/tigerspike-logo.png'
+import todaytixLogo from 'static/logos/todaytix-logo.png'
+import cv from 'static/resume/jordan_garcia_oct_18_cv.pdf'
 
 const IndexPage = () => {
   const onCvClick = () => {
@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SeoData title="Home" />
       <IntroSection />
       <InfoSection title="Background">
         <p>
@@ -53,12 +53,12 @@ const IndexPage = () => {
             },
             {
               heading: 'Design',
-              items: ['Sketch', 'Zeplin', 'InVision', 'Photoshop', 'Prototyping', 'Wireframing'] 
+              items: ['Sketch', 'Zeplin', 'InVision', 'Photoshop', 'Prototyping', 'Wireframing']
             }
           ]}
         />
       </InfoSection>
-      <InfoSection> 
+      <InfoSection>
         <a href={cv} target="_blank" rel="noopener noreferrer" onClick={onCvClick}>
           View my resume
         </a>
@@ -73,12 +73,13 @@ const IndexPage = () => {
       <InfoSection title="Experience">
         <ExperienceList
           experiences={[
-	    {
-		companyName: 'Invitae, NY',
-		roles: [
-		  {title: 'Technical Lead', duration: 'Dec 19’ - Present'}, 
-		  {title: 'Senior Software Engineer', duration: 'Nov 18’ - Dec 19’' }],
-              	logo: {alt: 'Invitae, NYC logo', image: invitaeLogo}
+            {
+              companyName: 'Invitae, NY',
+              roles: [
+                {title: 'Technical Lead', duration: 'Dec 19’ - Present'},
+                {title: 'Senior Software Engineer', duration: 'Nov 18’ - Dec 19’'}
+              ],
+              logo: {alt: 'Invitae, NYC logo', image: invitaeLogo}
             },
             {
               companyName: 'TodayTix, NY',

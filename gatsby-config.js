@@ -98,7 +98,7 @@ module.exports = {
           styles: path.resolve(__dirname, 'src/styles'),
           images: path.resolve(__dirname, 'src/images'),
         },
-        extensions: ['tsx', 'ts', 'css'],
+        extensions: ['tsx', 'ts', 'css', 'jpg', 'png', 'jpeg'],
       },
     },
   ],

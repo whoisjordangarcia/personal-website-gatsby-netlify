@@ -49,16 +49,16 @@ const IndexPage = () => {
             },
             {
               heading: 'Infra',
-              items: ['Docker', 'Kubernetes', 'Ansible', 'NGINX']
+              items: ['Docker', 'Kubernetes', 'FluxCD', 'Jenkins', 'Ansible', 'NGINX']
             },
             {
               heading: 'Design',
-              items: ['Sketch', 'InDesign', 'Photoshop', 'Prototyping', 'Wireframing', 'User Testing']
+              items: ['Sketch', 'Zeplin', 'InVision', 'Photoshop', 'Prototyping', 'Wireframing'] 
             }
           ]}
         />
       </InfoSection>
-      <InfoSection title="">
+      <InfoSection> 
         <a href={cv} target="_blank" rel="noopener noreferrer" onClick={onCvClick}>
           View my resume
         </a>
@@ -73,10 +73,12 @@ const IndexPage = () => {
       <InfoSection title="Experience">
         <ExperienceList
           experiences={[
-            {
-              companyName: 'Invitae, NY',
-              roles: [{title: 'Senior Software Engineer', duration: 'Nov 18’ - Present'}],
-              logo: {alt: 'Invitae, NYC logo', image: invitaeLogo}
+	    {
+		companyName: 'Invitae, NY',
+		roles: [
+		  {title: 'Technical Lead', duration: 'Dec 19’ - Present'}, 
+		  {title: 'Senior Software Engineer', duration: 'Nov 18’ - Dec 19’' }],
+              	logo: {alt: 'Invitae, NYC logo', image: invitaeLogo}
             },
             {
               companyName: 'TodayTix, NY',

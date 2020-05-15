@@ -10,7 +10,11 @@
   The second iteration of <a href="https://jordangarcia.me">jordangarcia.me</a> built with <a href="https://gatsby.com">Gatsby</a> and hosted with <a href="https://netlify.com">Netlify</a>
 </p>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ad73eb57-582d-4b1d-aee9-2a10e847a5a0/deploy-status)](https://app.netlify.com/sites/naughty-noyce-bb02ae/deploys)
+<p align="center">
+  <a href="https://app.netlify.com/sites/naughty-noyce-bb02ae/deploys?filter=master" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/ad73eb57-582d-4b1d-aee9-2a10e847a5a0/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
 ## 🛠 Installation & Setup
 

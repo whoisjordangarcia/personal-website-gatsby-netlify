@@ -4,7 +4,7 @@ import ExperienceList from 'components/ExperienceList/ExperienceList'
 import InfoSection from 'components/InfoSection/InfoSection'
 import IntroSection from 'components/IntroSection/IntroSection'
 import Layout from 'components/Layout'
-import SeoData from 'components/SeoData/SeoData'
+import Seo from 'components/Seo/Seo'
 import SkillList from 'components/SkillList/SkillList'
 
 import invitaeLogo from 'static/logos/invitae-logo.png'
@@ -22,7 +22,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SeoData title="Home" />
+      <Seo title="Home" />
       <IntroSection />
       <InfoSection title="Background">
         <p>

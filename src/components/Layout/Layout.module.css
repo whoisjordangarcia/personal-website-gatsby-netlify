@@ -1,0 +1,6 @@
+@value colors: '../../styles/colors.css';
+@value navy_50 from colors;
+
+.main {
+  background-color: navy_50;
+}

@@ -69,30 +69,30 @@ module.exports = {
         extensions: ['tsx', 'ts', 'css', 'jpg', 'png', 'jpeg'],
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        commonmark: true,
-        footnotes: true,
-        pedantic: true,
-        gfm: true,
-        plugins: [
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-              rel: 'nofollow noopener noreferrer',
-            },
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `content`,
+    //     path: `${__dirname}/src/content`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     commonmark: true,
+    //     footnotes: true,
+    //     pedantic: true,
+    //     gfm: true,
+    //     plugins: [
+    //       {
+    //         resolve: 'gatsby-remark-external-links',
+    //         options: {
+    //           target: '_blank',
+    //           rel: 'nofollow noopener noreferrer',
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 }

@@ -23,6 +23,7 @@ const renderItems = (experiences: Experience[]): React.ReactNode =>
     <div key={item.companyName} className={styles.experience}>
       {item.logo ? (
         <img
+          loading="lazy"
           alt={item.logo.alt}
           src={item.logo.image}
           className={styles.logo}

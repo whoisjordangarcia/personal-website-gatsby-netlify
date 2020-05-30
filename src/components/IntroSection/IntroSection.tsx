@@ -7,7 +7,12 @@ import styles from './IntroSection.module.css'
 
 const IntroSection: React.FC = () => (
   <header className={styles.wrapper}>
-    <img alt="Profile" src={profilePhoto} className={styles.profilePhoto} />
+    <img
+      alt="Profile"
+      src={profilePhoto}
+      className={styles.profilePhoto}
+      loading="lazy"
+    />
     <div className={styles.introSection}>
       <h1 className={styles.introText}>
         Hello! <Wave />

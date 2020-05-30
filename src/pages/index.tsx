@@ -110,6 +110,7 @@ const IndexPage = (): React.ReactNode => {
           src="https://ghchart.rshah.org/EE5050/arickho"
           style={{ width: '100%' }}
           alt="Jordan Garcia's Github chart"
+          loading="lazy"
         />
       </InfoSection>
 

@@ -35,7 +35,7 @@
     "gatsby-transformer-sharp": "^2.5.2",
     "gsap": "^3.2.6",
     "imagemin-pngquant": "^8.0.0",
-    "pngquant-bin": "^5.0.2",
+    "pngquant-bin": "^6.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0"

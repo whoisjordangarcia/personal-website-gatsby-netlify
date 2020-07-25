@@ -1,13 +1,13 @@
 import React from 'react'
 
-import styles from './FourOhFour.module.css'
+import { Wrapper, Link, Text, Heading } from './FourOhFour.style'
 
 const FourOhFour: React.FC<{}> = () => (
-  <div className={styles.wrapper}>
-    <h2>PAGE NOT FOUND 🙁</h2>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    <a href="/">Redirect back to home.</a>
-  </div>
+  <Wrapper>
+    <Heading>PAGE NOT FOUND 🙁</Heading>
+    <Text>You just hit a asdfat doesn&#39;t exist... the sadness.</Text>
+    <Link href="/">Redirect back to home.</Link>
+  </Wrapper>
 )
 
 export default FourOhFour

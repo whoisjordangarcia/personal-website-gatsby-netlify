@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Footer.module.css'
+import { FooterWrapper, List, ListItem, Link } from './Footer.style'
 
 interface Footer {
   title: string
@@ -12,33 +12,29 @@ interface Props {
   onClick: (title: string) => void
 }
 
-const renderItems = (
-  items: Footer[],
-  onClick: (title: string) => void
-): React.ReactNode => {
+const Footer: React.FC<Props> = ({ items, onClick }) => {
   const handleOnClick = (title: string): void => {
     onClick(title)
   }
 
-  return items.map((item) => (
-    <li key={item.title} className={styles.listItem}>
-      <a
-        href={item.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.link}
-        onClick={(): void => handleOnClick(item.title)}
-      >
-        {item.title}
-      </a>
-    </li>
-  ))
+  return (
+    <FooterWrapper>
+      <List>
+        {items.map((item) => (
+          <ListItem key={item.title}>
+            <Link
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(): void => handleOnClick(item.title)}
+            >
+              {item.title}
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </FooterWrapper>
+  )
 }
-
-const Footer: React.FC<Props> = ({ items, onClick }) => (
-  <footer className={styles.footer}>
-    <ul className={styles.list}>{renderItems(items, onClick)}</ul>
-  </footer>
-)
 
 export default Footer

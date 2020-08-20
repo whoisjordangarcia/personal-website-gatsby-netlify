@@ -2,7 +2,7 @@ import React from 'react'
 import Wave from 'components/Wave/Wave'
 import MovingBlob from 'components/MovingBlob/MovingBlob'
 import TechnologistIcon from 'components/TechnologistIcon/TechnologistIcon'
-import profilePhoto from 'images/profile_photo.0983212.JPG'
+import profilePhoto from 'images/profile_photo.0983212.jpg'
 import styles from './IntroSection.module.css'
 
 const IntroSection: React.FC = () => (

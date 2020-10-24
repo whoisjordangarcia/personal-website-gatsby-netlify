@@ -63,6 +63,7 @@ const IndexPage = (): React.ReactNode => {
                 'Node',
                 'Golang',
                 'C#',
+                'Kotlin',
                 'Redis',
                 'MySQL',
                 'MongoDB',
@@ -85,9 +86,7 @@ const IndexPage = (): React.ReactNode => {
                 'Sketch',
                 'Zeplin',
                 'InVision',
-                'Photoshop',
-                'Prototyping',
-                'Wireframing',
+                'Photoshop'
               ],
             },
           ]}

@@ -107,7 +107,7 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Contribution">
         <img
-          src="https://ghchart.rshah.org/EE5050/arickho"
+          src="https://ghchart.rshah.org/EE5050/whoisjordangarcia"
           style={{ width: '100%' }}
           alt="Jordan Garcia's Github chart"
           loading="lazy"

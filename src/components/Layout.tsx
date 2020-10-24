@@ -19,7 +19,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       <main>{children}</main>
       <Footer
         items={[
-          { title: 'Github', url: 'https://github.com/arickho' },
+          { title: 'Github', url: 'https://github.com/whoisjordangarcia' },
           {
             title: 'Linkedin',
             url: 'https://www.linkedin.com/in/arickhogarcia/',

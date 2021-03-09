@@ -21,8 +21,7 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          Hello! I&apos;m Jordan, a technical lead based in New York, NY. As a
-          technical lead, I enjoy creating clever solutions that are scalable
+          Hello! I&apos;m Jordan, a technical lead based in New York, NY. I enjoy creating clever solutions that are scalable
           and performant while providing engaging, pixel-perfect user
           experiences.
         </p>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import manTechnologistBackground from '../../images/man-technologist-icon.png'
 
-import styles from './TechnologistIcon.module.css'
+import * as styles from './TechnologistIcon.module.css'
 
 const TechnologistIcon: React.FC = () => (
   <span

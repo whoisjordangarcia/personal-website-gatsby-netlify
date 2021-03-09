@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './FourOhFour.module.css'
+import * as styles from './FourOhFour.module.css'
 
 const FourOhFour: React.FC<{}> = () => (
   <div className={styles.wrapper}>

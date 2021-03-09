@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './InfoSection.module.css'
+import * as styles from './InfoSection.module.css'
 
 interface Props {
   title?: string

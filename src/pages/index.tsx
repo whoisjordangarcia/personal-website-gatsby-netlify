@@ -1,11 +1,11 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-gtag'
 
 import ExperienceList from 'components/ExperienceList/ExperienceList'
 import InfoSection from 'components/InfoSection/InfoSection'
 import IntroSection from 'components/IntroSection/IntroSection'
 import Layout from 'components/Layout'
 import Seo from 'components/Seo/Seo'
-import SkillList from 'components/SkillList/SkillList'
 
 import invitaeLogo from 'static/logos/invitae-logo.png'
 import tigerspikeLogo from 'static/logos/tigerspike-logo.png'
@@ -13,13 +13,6 @@ import todaytixLogo from 'static/logos/todaytix-logo.png'
 import cv from 'static/resume/jordan_garcia_oct_18_cv.pdf'
 
 const IndexPage = (): React.ReactNode => {
-  const onCvClick = (): void => {
-    window.dataLayer.push({
-      event: 'click',
-      link: 'cv',
-    })
-  }
-
   return (
     <Layout>
       <Seo title="Home" />
@@ -28,80 +21,36 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          Software engineer on an assortment of technical projects, consistently
-          recognised for achievements through my education and into my
-          professional career. I enjoy discovering clever solutions to complex
-          problems in all aspects of my field.
+          Hello! I&apos;m Jordan, a technical lead based in New York, NY. As a
+          technical lead, I enjoy creating clever solutions that are scalable
+          and performant while providing engaging, pixel-perfect user
+          experiences.
         </p>
         <p>
-          <strong>When I’m not in front of the computer screen coding</strong>,
-          I’m probably finding the next place to eat on ‘The Infatuation’,
-          exploring the five boroughs of new york, or crossing off another item
-          on my bucket list.
+          If you&apos;d like to get in touch with me, then{' '}
+          <OutboundLink
+            href="mailto:arickho@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            email
+          </OutboundLink>{' '}
+          and{' '}
+          <OutboundLink
+            href="https://twitter.com/whoismrgarcia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            twitter
+          </OutboundLink>{' '}
+          are your best channels.
         </p>
-      </InfoSection>
-
-      <InfoSection title="Skills">
-        <SkillList
-          skills={[
-            {
-              heading: 'Frontend',
-              items: [
-                'Typescript',
-                'React',
-                'Redux',
-                'Graphql',
-                'Webpack',
-                'Jest',
-                'Cypress',
-              ],
-            },
-            {
-              heading: 'Backend',
-              items: [
-                'Python',
-                'Node',
-                'Golang',
-                'C#',
-                'Kotlin',
-                'Redis',
-                'MySQL',
-                'MongoDB',
-              ],
-            },
-            {
-              heading: 'Infra',
-              items: [
-                'Docker',
-                'Kubernetes',
-                'FluxCD',
-                'Jenkins',
-                'Ansible',
-                'NGINX',
-              ],
-            },
-            {
-              heading: 'Design',
-              items: [
-                'Sketch',
-                'Zeplin',
-                'InVision',
-                'Photoshop'
-              ],
-            },
-          ]}
-        />
       </InfoSection>
 
       <InfoSection>
-        <a
-          href={cv}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={onCvClick}
-        >
+        <OutboundLink href={cv} target="_blank" rel="noopener noreferrer">
           View my resume
-        </a>
+        </OutboundLink>
       </InfoSection>
 
       <InfoSection title="Contribution">
@@ -119,7 +68,7 @@ const IndexPage = (): React.ReactNode => {
             {
               companyName: 'Invitae, NY',
               roles: [
-                { title: 'Technical Lead', duration: 'Dec 19’ - Present' },
+                { title: 'Engineering Lead', duration: 'Dec 19’ - Present' },
                 {
                   title: 'Senior Software Engineer',
                   duration: 'Nov 18’ - Dec 19’',

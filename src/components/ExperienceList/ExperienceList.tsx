@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './ExperienceList.module.css'
+import * as styles from './ExperienceList.module.css'
 
 interface Experience {
   companyName: string

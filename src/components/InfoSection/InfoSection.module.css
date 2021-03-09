@@ -21,6 +21,10 @@
   margin: 20px 0;
 }
 
+.content p {
+  margin-top: 0;
+}
+
 .content h3 {
   font-size: 18px;
   line-height: 45px;
@@ -29,7 +33,7 @@
   padding: 0;
 }
 
-.content ul {
+.content .list {
   list-style: none;
   flex-grow: 1;
 }
@@ -37,16 +41,9 @@
 .content a,
 .content a:visited {
   color: #ee5050;
-  font-size: 22px;
-  font-size: bold;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease-in-out;
-}
-
-.content a:hover {
-  border-bottom: 2px solid #ee5050;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {

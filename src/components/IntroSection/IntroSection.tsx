@@ -3,7 +3,7 @@ import Wave from 'components/Wave/Wave'
 import MovingBlob from 'components/MovingBlob/MovingBlob'
 import TechnologistIcon from 'components/TechnologistIcon/TechnologistIcon'
 import profilePhoto from 'images/profile_photo.0983212.png'
-import styles from './IntroSection.module.css'
+import * as styles from './IntroSection.module.css'
 
 const IntroSection: React.FC = () => (
   <header className={styles.wrapper}>

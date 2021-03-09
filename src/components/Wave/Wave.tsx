@@ -2,7 +2,7 @@ import React from 'react'
 
 import waveBackground from '../../images/wave-icon.png'
 
-import styles from './Wave.module.css'
+import * as styles from './Wave.module.css'
 
 const Wave: React.FC = () => (
   <span

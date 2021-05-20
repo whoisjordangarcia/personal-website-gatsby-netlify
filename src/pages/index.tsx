@@ -21,9 +21,9 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          Hello! I&apos;m Jordan, a technical lead based in New York, NY. I enjoy creating clever solutions that are scalable
-          and performant while providing engaging, pixel-perfect user
-          experiences.
+          Hello! I&apos;m Jordan, a technical lead based in Miami, FL. I enjoy
+          creating clever solutions that are scalable and performant while
+          providing engaging, pixel-perfect user experiences.
         </p>
         <p>
           If you&apos;d like to get in touch with me, then{' '}
@@ -67,7 +67,8 @@ const IndexPage = (): React.ReactNode => {
             {
               companyName: 'Invitae, NY',
               roles: [
-                { title: 'Engineering Lead', duration: 'Dec 19’ - Present' },
+                { title: 'Engineering Lead', duration: 'May 21’ - Present' },
+                { title: 'Technical Lead', duration: 'Dec 19’ - May 21’' },
                 {
                   title: 'Senior Software Engineer',
                   duration: 'Nov 18’ - Dec 19’',

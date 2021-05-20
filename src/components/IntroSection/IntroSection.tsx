@@ -18,11 +18,11 @@ const IntroSection: React.FC = () => (
         Hello! <Wave />
       </h1>
       <h2 className={styles.introText}>
-        I&apos;m <span>Jordan Garcia</span>, a technical lead at{' '}
+        I&apos;m <span>Jordan Garcia</span>, a engineering lead at{' '}
         <a href="https://invitae.com" target="_blank" rel="noopener noreferrer">
           @invitae
         </a>
-        . An aussie &quot;aw-see&quot; (\ä-s\) currently residing in new york.{' '}
+        . An aussie &quot;aw-see&quot; (\ä-s\) currently residing in miami.{' '}
         <TechnologistIcon />
       </h2>
     </div>

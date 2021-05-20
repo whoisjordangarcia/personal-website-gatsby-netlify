@@ -5,7 +5,7 @@ module.exports = {
   pathPrefix: '/jordangarcia.me',
   siteMetadata: {
     title: `Who is Jordan Garcia?`,
-    description: `Senior Software Engineer at @invitae. Currently residing in New York, New York.`,
+    description: `Senior Software Engineer at @invitae. Currently residing in Miami, Florida.`,
     author: `@whoisjordangarcia`,
   },
   plugins: [

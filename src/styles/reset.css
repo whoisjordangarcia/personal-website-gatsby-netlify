@@ -1,3 +1,4 @@
+/* stylelint-disable selector-pseudo-class-no-unknown, declaration-block-no-shorthand-property-overrides, no-descending-specificity */
 :global(html),
 :global(body),
 :global(div),
@@ -86,6 +87,7 @@
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 :global(article),
 :global(aside),
@@ -100,25 +102,31 @@
 :global(section) {
   display: block;
 }
+
 :global(body) {
   line-height: 1;
 }
+
 :global(ol),
 :global(ul) {
   list-style: none;
 }
+
 :global(blockquote),
 :global(q) {
   quotes: none;
 }
-:global(blockquote:before),
-:global(blockquote:after),
-:global(q:before),
-:global(q:after) {
+
+:global(blockquote::before),
+:global(blockquote::after),
+:global(q::before),
+:global(q::after) {
   content: '';
   content: none;
 }
+
 :global(table) {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* stylelint-enable selector-pseudo-class-no-unknown, declaration-block-no-shorthand-property-overrides, no-descending-specificity */

@@ -1,3 +1,4 @@
+/* stylelint-disable declaration-colon-newline-after, value-list-comma-newline-after */
 @font-face {
   font-family: 'Apercu';
   src: local('Apercu'),
@@ -48,3 +49,4 @@ body {
   padding: 0;
   font-display: swap;
 }
+/* stylelint-enable declaration-colon-newline-after, value-list-comma-newline-after */

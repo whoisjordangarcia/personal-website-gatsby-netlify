@@ -2,7 +2,7 @@ name: 🔎 Checker
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request: {}
 jobs:
   run-prettier:
@@ -22,7 +22,7 @@ jobs:
 
       - name: 💇🏻‍♀️ Prettier
         run: npm run format
-        
+
   run-lint:
     name: 🔬 Lint
     runs-on: ubuntu-latest
@@ -39,7 +39,10 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: 🔬 Lint
-        run: npm run validate
+        run: npm run lint:check
+
+      - name: 🔬 Stylelint
+        run: npm run stylelint:check
 
   run-jest:
     name: 🃏 Jest

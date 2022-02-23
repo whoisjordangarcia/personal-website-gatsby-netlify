@@ -8,7 +8,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{ts,tsx,md,mdx,json,css}\"",
+    "format": "prettier --check \"**/*.{ts,tsx,md,mdx,json,css}\"", 
+    "format:fix": "prettier --write \"**/*.{ts,tsx,md,mdx,json,css}\"",
     "validate": "npm run lint && npm run stylelint",
     "lint": "eslint --ignore-path .gitignore --fix \"./src/**/*.{ts,tsx}\"",
     "stylelint": "stylelint --syntax css --fix \"./src/**/*.css\"",

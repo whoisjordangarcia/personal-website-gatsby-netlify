@@ -6,6 +6,7 @@ on:
   pull_request: {}
 jobs:
   run-prettier:
+    name: 💇🏻‍♀️ Prettier
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
@@ -23,6 +24,7 @@ jobs:
         run: npm run prettier
         
   run-lint:
+    name: 🔬 Lint
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
@@ -38,3 +40,21 @@ jobs:
 
       - name: 🔬 Lint
         run: npm run validate
+
+  run-jest:
+    name: 🃏 Jest
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v2
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+
+      - name: 📥 Download deps
+        uses: bahmutov/npm-install@v1
+
+      - name: 🃏 Run jest
+        run: npm run test

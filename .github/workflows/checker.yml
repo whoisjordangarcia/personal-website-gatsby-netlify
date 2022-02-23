@@ -21,7 +21,7 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: 💇🏻‍♀️ Prettier
-        run: npm run prettier
+        run: npm run format
         
   run-lint:
     name: 🔬 Lint

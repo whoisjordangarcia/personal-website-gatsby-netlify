@@ -1,15 +1,22 @@
 .wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  padding-top: 35vh;
+  padding-bottom: 35vh;
+  margin-left: 50px;
+  margin-right: 50px;
   display: flex;
   flex-direction: column;
-  margin-top: 25vh;
-  margin-bottom: 25vh;
   justify-content: center;
-  padding: 20px;
 }
 
 .introText {
   font-weight: 300;
   font-size: 28px;
+  color: #fff;
 }
 
 .introText span {
@@ -29,12 +36,12 @@
   transition: all 0.3s ease-in-out;
   text-decoration: none;
   position: relative;
-  color: #4c4c4c;
+  color: #fff;
   border-bottom: 2px solid transparent;
 }
 
 .introSection a:hover {
-  border-bottom: 2px solid #4c4c4c;
+  border-bottom: 2px solid #fff;
 }
 
 .profilePhoto {
@@ -45,21 +52,17 @@
   margin-bottom: 20px;
 }
 
-.blobWrapper {
-  position: absolute;
-  transform: translateX(-30%);
-}
-
 @media (min-width: 768px) {
-  .wrapper {
-    flex-direction: row;
-    align-items: center;
+  .content {
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .introText {
-    font-weight: 300;
     font-size: 35px;
-    color: #4c4c4c;
   }
 
   .profilePhoto {

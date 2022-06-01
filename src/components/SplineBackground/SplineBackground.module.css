@@ -1,0 +1,12 @@
+.wrapper {
+  position: absolute;
+  width: 110%;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 110%;
+    height: 100%;
+  }
+}

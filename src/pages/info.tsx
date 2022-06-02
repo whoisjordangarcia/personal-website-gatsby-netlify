@@ -40,26 +40,26 @@ const IndexPage = (): React.ReactNode => {
       <InfoSection title="Bio">
         <h3>Long, First Person</h3>
         <p>
-          Hello! I&apos;m Jordan, a engineering lead based in Miami, FL. I enjoy
-          creating clever solutions that are scalable and performant while
+          Hello! I&apos;m Jordan, a engineering manager based in Miami, FL. I
+          enjoy creating clever solutions that are scalable and performant while
           providing engaging, pixel-perfect user experiences.
         </p>
         <h3>Long, Third Person</h3>
         <p>
-          Jordan is a engineering lead based in Miami, FL. He enjoys creating
+          Jordan is a engineering manager based in Miami, FL. He enjoys creating
           clever solutions that are scalable and performant while providing
           engaging, pixel-perfect user experiences.
         </p>
 
         <h3>Short, First Person</h3>
         <p>
-          Hi, I&apos;m Jordan Garcia. I&apos;m a engineering lead at Invitae and
-          an active contributor to the open-source community. I like solving
+          Hi, I&apos;m Jordan Garcia. I&apos;m a engineering manager at Invitae
+          and an active contributor to the open-source community. I like solving
           large-scale problems.
         </p>
         <h3>Short, Third Person</h3>
         <p>
-          Jordan Garcia is a engineering lead at Invitae and is an active
+          Jordan Garcia is a engineering manager at Invitae and is an active
           contributor to the open-source community. He also likes solving
           large-scale problems.
         </p>

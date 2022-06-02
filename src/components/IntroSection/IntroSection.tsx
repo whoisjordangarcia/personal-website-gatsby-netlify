@@ -20,7 +20,7 @@ const IntroSection: React.FC = () => (
           Hello! <Wave />
         </h1>
         <h2 className={styles.introText}>
-          I&apos;m <span>Jordan Garcia</span>, a engineering lead at{' '}
+          I&apos;m <span>Jordan Garcia</span>, a engineering manager at{' '}
           <a
             href="https://invitae.com"
             target="_blank"

@@ -21,9 +21,10 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          I&apos;m Jordan, an Engineering Manager at Invitae and currently living in Miami, FL.  
-          My passion lies in developing innovative, scalable, and high-performance solutions that 
-          deliver engaging and visually stunning user experiences.
+          I&apos;m Jordan, an Engineering Manager at Invitae and currently
+          living in Miami, FL. My passion lies in developing innovative,
+          scalable, and high-performance solutions that deliver engaging and
+          visually stunning user experiences.
         </p>
         <p>
           If you&apos;d like to get in touch with me, then{' '}

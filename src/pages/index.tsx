@@ -21,9 +21,9 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          Hello! I&apos;m Jordan, a engineer manager based in Miami, FL. I enjoy
-          creating clever solutions that are scalable and performant while
-          providing engaging, pixel-perfect user experiences.
+          I&apos;m Jordan, an Engineering Manager at Invitae and currently living in Miami, FL.  
+          My passion lies in developing innovative, scalable, and high-performance solutions that 
+          deliver engaging and visually stunning user experiences.
         </p>
         <p>
           If you&apos;d like to get in touch with me, then{' '}
@@ -65,7 +65,7 @@ const IndexPage = (): React.ReactNode => {
         <ExperienceList
           experiences={[
             {
-              companyName: 'Invitae, NY',
+              companyName: 'Invitae, (New York, NY)',
               roles: [
                 { title: 'Engineering Manager', duration: 'May 21’ - Present' },
                 { title: 'Technical Lead', duration: 'Dec 19’ - May 21’' },
@@ -77,7 +77,7 @@ const IndexPage = (): React.ReactNode => {
               logo: { alt: 'Invitae, NYC logo', image: invitaeLogo },
             },
             {
-              companyName: 'TodayTix, NY',
+              companyName: 'TodayTix, (New York, NY)',
               roles: [
                 {
                   title: 'Senior Software Engineer',
@@ -87,7 +87,7 @@ const IndexPage = (): React.ReactNode => {
               logo: { alt: 'TodayTix, NYC logo', image: todaytixLogo },
             },
             {
-              companyName: 'Tigerspike, NY',
+              companyName: 'Tigerspike, (New York, NY)',
               roles: [
                 {
                   title: 'Senior Software Engineer',
@@ -98,24 +98,18 @@ const IndexPage = (): React.ReactNode => {
               logo: { alt: 'Tigerspike, NYC logo', image: tigerspikeLogo },
             },
             {
-              companyName: 'Tigerspike, SYD',
+              companyName: 'Tigerspike, (Sydney, Australia)',
               roles: [
                 { title: 'Software Engineer', duration: 'Feb 14’ - Sept 15’' },
               ],
               logo: { alt: 'Tigerspike, SYD logo', image: tigerspikeLogo },
             },
             {
-              companyName: 'Western Australia Police Airwing, PER',
-              roles: [
-                { title: 'Software Developer', duration: 'Jul 11’ - Jan 14’' },
-              ],
-            },
-            {
-              companyName: 'Simbiotic, PER',
+              companyName: 'Simbiotic, (Perth, Australia)',
               roles: [
                 {
                   title: 'Software Developer / Designer',
-                  duration: 'Jul 11’ - Nov 11’',
+                  duration: 'Jul 11’ - Jan 14’',
                 },
               ],
             },

@@ -10,7 +10,7 @@ import Seo from 'components/Seo/Seo'
 import invitaeLogo from 'static/logos/invitae-logo.png'
 import tigerspikeLogo from 'static/logos/tigerspike-logo.png'
 import todaytixLogo from 'static/logos/todaytix-logo.png'
-import cv from 'static/resume/jordan_garcia_oct_18_cv.pdf'
+import cv from 'static/resume/CV_JORDAN_GARCIA_MARCH_2024_R2.pdf'
 
 const IndexPage = (): React.ReactNode => {
   return (
@@ -21,8 +21,8 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          Hello! I&apos;m Jordan, a engineer manager based in Miami, FL. I enjoy
-          creating clever solutions that are scalable and performant while
+          Hello! I&apos;m Jordan, a software engineer based in Miami, FL. I
+          enjoy creating clever solutions that are scalable and performant while
           providing engaging, pixel-perfect user experiences.
         </p>
         <p>
@@ -67,7 +67,7 @@ const IndexPage = (): React.ReactNode => {
             {
               companyName: 'Invitae, NY',
               roles: [
-                { title: 'Engineering Manager', duration: 'May 21’ - Present' },
+                { title: 'Engineering Lead', duration: 'May 21’ - Present' },
                 { title: 'Technical Lead', duration: 'Dec 19’ - May 21’' },
                 {
                   title: 'Senior Software Engineer',
@@ -105,17 +105,11 @@ const IndexPage = (): React.ReactNode => {
               logo: { alt: 'Tigerspike, SYD logo', image: tigerspikeLogo },
             },
             {
-              companyName: 'Western Australia Police Airwing, PER',
-              roles: [
-                { title: 'Software Developer', duration: 'Jul 11’ - Jan 14’' },
-              ],
-            },
-            {
               companyName: 'Simbiotic, PER',
               roles: [
                 {
                   title: 'Software Developer / Designer',
-                  duration: 'Jul 11’ - Nov 11’',
+                  duration: 'Jul 11’ - Nov 14’',
                 },
               ],
             },

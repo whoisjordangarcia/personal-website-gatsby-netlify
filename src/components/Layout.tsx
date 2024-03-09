@@ -21,7 +21,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             title: 'Instagram',
             url: 'https://www.instagram.com/whoisjordangarcia/',
           },
-          { title: 'Info', url: '/info' },
         ]}
       />
     </>

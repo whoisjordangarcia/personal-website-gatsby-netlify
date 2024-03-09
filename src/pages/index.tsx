@@ -21,8 +21,8 @@ const IndexPage = (): React.ReactNode => {
 
       <InfoSection title="Background">
         <p>
-          Hello! I&apos;m Jordan, a software engineer based in Miami, FL. I
-          enjoy creating clever solutions that are scalable and performant while
+          Hello! I&apos;m Jordan, a engineering lead based in Miami, FL. I enjoy
+          creating clever solutions that are scalable and performant while
           providing engaging, pixel-perfect user experiences.
         </p>
         <p>
